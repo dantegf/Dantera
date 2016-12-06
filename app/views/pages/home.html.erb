@@ -1,2 +1,43 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<h1>Dantera.com</h1>
+
+<!-- Search Form -->
+<%= form_tag(items_show_path, :method => "get", id: "search-form") do %>
+    <%= text_field_tag :search, params[:search], placeholder: "Insert Item ID" %>
+    <% if user_signed_in? %>
+      <%= submit_tag "Search", :name => nil %>
+    <% else %>
+      <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Search</button>
+    <% end %>
+<% end %>
+
+<hr>
+
+<!-- Bootstrap Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Create Account</h4>
+        <h6 class="modal-description">It's free and simple</h6>
+      </div>
+
+      <div class="modal-body">
+        <%= render "devise/registrations/new" %>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary">Sign Up</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--
+<% if user_signed_in? %>
+  <h1>Yep</h1>
+<% else %>
+  <h1>Not logged in</h1>
+<% end %>
+-->
