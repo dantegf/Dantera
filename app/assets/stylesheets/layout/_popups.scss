@@ -1,0 +1,33 @@
+a {
+  color: #e0e0e0
+}
+
+a:hover {
+  color: gray;
+  text-decoration: none
+}
+
+.btn-signup {
+  background-color: #0197f6;
+  border-radius: 4px;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  transition: 0.5s
+}
+
+.btn-signup:hover {
+  background-color: #2a2a72;
+  color: white;
+  transition: 0.5s
+}
+
+.modal-content  {
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    max-width: 400px;
+    -webkit-border-radius: 4px !important;
+    -moz-border-radius: 4px !important;
+    border-radius: 4px !important;
+}
+

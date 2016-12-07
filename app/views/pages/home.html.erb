@@ -6,7 +6,7 @@
     <% if user_signed_in? %>
       <%= submit_tag "Search", :name => nil %>
     <% else %>
-      <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Search</button>
+      <button type="button" class="search-btn" data-toggle="modal" data-target="#myModal">Search</button>
     <% end %>
 <% end %>
 
@@ -17,7 +17,10 @@
 
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Create Account</h4>
+        <ul class="list-inline">
+        <li><h4 class="modal-title" id="myModalLabel">Create Account &nbsp; </h4></li>
+        <li><h4> <%= render "devise/shared/login" %></h4></li>
+        </ul>
         <h6 class="modal-description">It's free and simple</h6>
       </div>
 

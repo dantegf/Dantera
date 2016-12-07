@@ -1,0 +1,7 @@
+<% def devise_mapping %>
+  <% Devise.mappings[:user] %>
+<% end %>
+
+<%- if controller_name != 'sessions' %>
+  <%= link_to "Log in", new_session_path(:user) %><br />
+<% end -%>
