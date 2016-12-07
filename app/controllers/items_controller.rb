@@ -22,7 +22,7 @@ class ItemsController < ApplicationController
     generate_code(@item)
     if @item.valid?
       @item.save
-      redirect_to @item, notice: 'Item successfully created'
+      redirect_to "/items/index", notice: 'Item successfully created'
     else
       render :new
     end
