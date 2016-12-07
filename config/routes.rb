@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :items
+
   get 'items/index'
 
   get 'items/show'

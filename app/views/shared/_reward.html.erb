@@ -11,14 +11,15 @@
 
     <div class="col-xs-6 text-center">
       <h3>Email form below</h3>
-        <!-- Email form below -->
         <div align="center">
-
+         <%= simple_form_for @item, url: {action: "create"}, html: {class: "add_item"} do |f| %>
+            <p><%= f.text_field :contact, placeholder: current_user.email %></p>
+            <p><%= f.text_field :contact, value: current_user.phone, prompt: "please put your phone #" %></p>
+            <%= f.text_area :message, size: "38x9" %>
+            <br>
+            <%= f.submit "Create", method: "POST" %>
+          <% end %>
         </div>
-        <!-- Email form above -->
-
     </div>
-
-
-  </div> <!-- Closes Row -->
-</div> <!-- Closes Container -->
+  </div>
+</div>

@@ -8,8 +8,9 @@ class ItemsController < ApplicationController
   def show
     if params[:search]
       @item = Item.search(params[:search]).first
-    else
-      nil
+    end
+    if @item.nil?
+      redirect_to root_path, notice: 'try again, item does not exist'
     end
   end
 

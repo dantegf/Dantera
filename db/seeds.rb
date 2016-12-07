@@ -1,7 +1,95 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+ Item.destroy_all
+ User.destroy_all
+
+ users = [
+ {
+   email: "james@gmail.com",
+   created_at:"",
+   updated_at:"",
+   username:"James",
+   location:"Barcelona",
+   phone:"+34 553 555 222",
+   password:"11111111111"
+ },
+ {
+   email: "peter@gmail.com",
+   created_at:"",
+   updated_at:"",
+   username:"Peter",
+   location:"Sao Paulo",
+   password:"11111111111",
+   phone:"+34 553 555 222"
+ },
+ {
+   email: "ruby@gmail.com",
+   created_at:"",
+   updated_at:"",
+   username:"Ruby",
+   location:"Hong Kong",
+   password:"11111111111",
+   phone:"+34 553 555 222"
+ },
+ {
+   email: "yu@gmail.com",
+   created_at:"",
+   updated_at:"",
+   username:"Yu",
+   location:"Beijing",
+   password:"11111111111",
+   phone:"+34 553 555 222"
+ },
+ {
+   email: "arata@gmail.com",
+   created_at:"",
+   updated_at:"",
+   username:"Arata",
+   location:"Tokyo",
+   password:"11111111111",
+   phone:"+34 553 555 222"
+ },
+ ]
+ users.each { |params| User.create!(params) }
+
+ items = [
+ {
+   user: User.all.sample,
+   name: "Wallet",
+   description: "Nike Wallet",
+   code: "67TygB",
+   reward: "35.00",
+   contact: ""
+ },
+ {
+   user: User.all.sample,
+   name: "Pen",
+   description: "Mont Blanc Silver Pen",
+   code: "990UjN",
+   reward: "",
+   contact: ""
+ },
+ {
+   user: User.all.sample,
+   name: "Backbag",
+   description: "Black Swiss Bag",
+   code: "43RGtk",
+   reward: "10.00",
+   contact: ""
+ },
+ {
+   user: User.all.sample,
+   name: "Lenovo Notebook",
+   description: "R350",
+   code: "AAWeRt",
+   reward: "200.00",
+   contact: ""
+ },
+ {
+   user: User.all.sample,
+   name: "Samsonite",
+   description: "luggage",
+   code: "HgBN2m",
+   reward: "25.00",
+   contact: ""
+ },
+ ]
+ items.each { |params| Item.create!(params) }
