@@ -1,2 +1,11 @@
-<h1>Items#new</h1>
-<p>Find me in app/views/items/new.html.erb</p>
+
+<h1>Add an item <%= @items %></h1>
+
+<%= simple_form_for @item, url: {action: "create"}, html: {class: "add_item"} do |f| %>
+  <p><%= f.text_field :reward, placeholder: '$' %></p>
+  <p><%= f.text_field :contact, collection: [ current_user.email, current_user.phone ], prompt: "Select contact method", selected: current_user.email %></p>
+  <%= f.text_area :name, size: "38x9" %>
+  <br>
+  <%= f.submit "Create", method: "POST" %>
+<% end %>
+
