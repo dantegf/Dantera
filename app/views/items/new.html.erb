@@ -4,7 +4,7 @@
 <%= simple_form_for @item, url: {action: "create"}, html: {class: "add_item"} do |f| %>
   <p><%= f.text_field :reward, placeholder: '$' %></p>
   <p><%= f.text_field :contact, collection: [ current_user.email, current_user.phone ], prompt: "Select contact method", selected: current_user.email %></p>
-  <%= f.text_area :name, size: "38x9" %>
+  <%= f.text_area :message, size: "38x9" %>
   <br>
   <%= f.submit "Create", method: "POST" %>
 <% end %>
