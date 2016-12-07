@@ -1,1 +1,22 @@
-<h2>Here's the item you searched for: </h2>
+<!--
+If the @item's user_id is equal to the current_user.id,
+then there's gonna be a redirect to the user's control panel;
+else, execute the code for this page ("contact the user")
+-->
+
+<% puts "Code Doesn't Exist. " if @item == nil %>
+
+<% if @item.user_id == current_user.id %>
+  <% redirect_to %>
+<% else %>
+  <%= render "shared/reward" %>
+<% end %>
+
+
+
+
+
+
+<!-- <h2>Here's the item you searched for: </h2>
+<%= @item.name %>
+<%= current_user.id %> -->
