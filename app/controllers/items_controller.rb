@@ -15,7 +15,6 @@ class ItemsController < ApplicationController
 
   def new
     @item = Item.new
-    @item = Item.find(:all)
   end
 
   def create
