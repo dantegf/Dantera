@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   get 'items/new'
 
-  get 'items/create'
+  post 'items/create'
 
   get 'items/update'
 
