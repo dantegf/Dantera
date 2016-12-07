@@ -7,7 +7,7 @@ class ItemsController < ApplicationController
 
   def show
     if params[:search]
-      @items = Item.search(params[:search])
+      @item = Item.search(params[:search]).first
     else
       nil
     end
