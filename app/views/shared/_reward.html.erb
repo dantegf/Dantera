@@ -1,4 +1,18 @@
-<h1>Contect the Owner Box</h1>
+<!-- Whole "Contact the Owner" page -->
+<div class="container">
+  <div class="row">
 
-<div class="code-big"><%= "# " + @item.code %></div>
-<div class="item-name-big"><%= @item.name %></div>
+    <div class="col-xs-6 text-center">
+      <div class="code-big"><strong><%= "# " + @item.code %></strong></div>
+      <div class="item-name-big"><%= @item.name %></div>
+      <div><%= "$ " + @item.reward.to_s  + ".00 " %></div>
+      <div><%= @item.description %></div>
+    </div>
+
+    <div class="col-xs-6 text-center">
+      <h3>Email Form Here</h3>
+    </div>
+
+
+  </div> <!-- Closes Row -->
+</div> <!-- Closes Container -->
