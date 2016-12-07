@@ -10,25 +10,12 @@
     </div>
 
     <div class="col-xs-6 text-center">
-
+      <h3>Email form below</h3>
         <!-- Email form below -->
         <div align="center">
-          <h3>Hurry up! Send a message to the owner</h3>
 
-          <%= simple_form_for Contact.new, :html => {:class => 'form-horizontal' } do |f| %>
-            <%= f.input :name, :required => true %>
-            <%= f.input :email, :required => true %>
-            <%= f.input :message, :as => :text, :required => true, :placeholder => "Hi, I've just found your item! " %>
-            <div class= "hidden">
-             <%= f.input :nickname, :hint => 'Leave this field blank!' %>
-            </div>
-        <div>
-        </br>
-          <%= f.button :submit, 'Send Message', :class=> "btn btn-primary" %>
         </div>
-          <% end %>
-      </div>
-      <!-- Ends email form -->
+        <!-- Email form above -->
 
     </div>
 
