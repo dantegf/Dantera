@@ -1,6 +1,33 @@
-<h2>This is the user's control panel</h2>
+<div class="control-panel" align="center">
 
-<button type="button" class="search-btn" data-toggle="modal" data-target="#modalNew">Add New Item</button>
+  <h3>Control Panel</h3>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6"> <!-- Left Div -->
+
+        <!-- List Below -->
+        <ul class="list-unstyled">
+
+          <li><a href="/items">Show Items</a></li>
+          <button type="button" class="btn-as-link" style="border: none; background: none; padding: 0" data-toggle="modal" data-target="#modalNew">Add New</button>
+          <li><a href="#">Edit Profile</a></li>
+          <li><a href="#">Privacy Settings</a></li>
+          <li><a href="#">Contact Info</a></li>
+        </ul>
+      </div> <!-- Closes Left -->
+
+      <div class="col-sm-6"> <!-- Right Div -->
+        <ul class="list-unstyled">
+          <li class="btn-shortcut"><a href="#">Lost an Item</a></li>
+          <li class="btn-shortcut"><a href="#">Found an Item</a></li>
+        </ul>
+      </div> <!-- Closes Right -->
+
+    </div>
+  </div>
+
+</div>
 
 <!-- Bootstrap Modal -->
 <div class="modal fade" id="modalNew" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
