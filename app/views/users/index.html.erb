@@ -1,2 +1,28 @@
-<h1>Users#index</h1>
-<p>Find me in app/views/users/index.html.erb</p>
+<h2>This is the user's control panel</h2>
+
+<button type="button" class="search-btn" data-toggle="modal" data-target="#modalNew">Add New Item</button>
+
+<!-- Bootstrap Modal -->
+<div class="modal fade" id="modalNew" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <ul class="list-inline">
+        <li><h4 class="modal-title" id="myModalLabel">Create New</h4></li>
+        <!-- <li><h4> <%#= render "devise/shared/login" %></h4></li> -->
+        </ul>
+        <!-- <h6 class="modal-description">It's free and simple</h6> -->
+      </div>
+
+      <div class="modal-body">
+        <%= render "items/new" %>
+      </div>
+
+      <!-- <div class="modal-footer">
+        <button type="button" class="btn btn-primary">Sign Up</button>
+      </div> -->
+    </div>
+  </div>
+</div>

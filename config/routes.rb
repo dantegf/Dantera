@@ -1,19 +1,19 @@
 Rails.application.routes.draw do
   resources :items
 
-  get 'items/index'
+  # get 'items/index'
 
-  get 'items/show'
+  # get 'items/show'
 
-  get 'items/new'
+  # get 'items/new'
 
-  post 'items/create'
+  # post 'items/create'
 
-  get 'items/update'
+  # get 'items/update'
 
-  get 'items/edit'
+  # get 'items/edit'
 
-  get 'items/destroy'
+  # get 'items/destroy'
 
   get 'users/index'
 
