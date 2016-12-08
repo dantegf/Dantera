@@ -8,8 +8,8 @@
    updated_at:"",
    username:"James",
    location:"Barcelona",
-   phone:"+34 553 555 222",
-   password:"11111111111"
+   password:"11111111111",
+   phone:"+34 553 555 222"
  },
  {
    email: "peter@gmail.com",

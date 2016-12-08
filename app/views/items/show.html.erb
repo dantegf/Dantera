@@ -1,7 +1,20 @@
 
 <% if @item.user_id == current_user.id %>
+
+<ul>
+<br>
+<p>Name: <%= @item.user.username %></p>
+<p>Email: <%= @item.user.email %></p>
+
+<ul>
+<p>Item: <%= @item.name %></p>
+<p>Item description: <%= @item.description %></p>
+<p>Code: <%= @item.code %></p>
+<p>default reward: <%= "$ " + @item.reward.to_s  + ".00 " %></p>
+<p>default contact: <%= @item.user.phone %></p>
+</ul>
+</ul>
+
 <% else %>
  <%= render "shared/reward" %>
 <% end %>
-
-
