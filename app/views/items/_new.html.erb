@@ -1,4 +1,5 @@
 <%= simple_form_for Item.new, url: {action: "create", controller: "items"}, html: {class: "add_item"} do |f| %>
+
   <h6>Name</h6>
   <div><%= f.text_field :name, :placeholder => "your name" %></div>
    <h6>Contact Info</h6>
@@ -7,6 +8,10 @@
   <%= f.text_field :reward, :placeholder => "set default reward" %>
   <h6>Description</h6>
   <div><%= f.text_area :description, size: "26x6" %></div>
+  <!-- Uploading Photo-->
+  <div><%= f.input :photo %></div>
+  <%= f.input :photo_cache, as: :hidden %>
+  <!-- Submit -->
   <div><%= f.submit "Create", method: "POST" %></div>
-<% end %>
 
+<% end %>
