@@ -1,8 +1,8 @@
-<!-- This is the "Contact the Owner" page -->
 <div class="container">
   <div class="row">
 
     <div class="col-xs-6 text-center">
+    <br>
       <div class="code-big"><strong><%= "# " + @item.code %></strong></div>
       <div class="item-name-big"><%= @item.name %></div>
       <div><%= "$ " + @item.reward.to_s  + ".00 " %></div>
@@ -13,8 +13,10 @@
       <h3>Email form below</h3>
         <div align="center">
          <%= simple_form_for @item, url: {action: "create"}, html: {class: "add_item"} do |f| %>
+            <p>Place your email: </p>
             <p><%= f.text_field :contact, placeholder: current_user.email %></p>
-            <p><%= f.text_field :contact, value: current_user.phone, prompt: "please put your phone #" %></p>
+            <p>Place your phone: </p>
+            <p><%= f.text_field :contact, placeholder: current_user.phone %></p>
             <%= f.text_area :message, size: "38x9" %>
             <br>
             <%= f.submit "Create", method: "POST" %>
