@@ -6,4 +6,6 @@ class Item < ApplicationRecord
   def self.search(search)
     where("code LIKE ?", "%#{search}%")
   end
+
+  mount_uploader :photo, PhotoUploader
 end
