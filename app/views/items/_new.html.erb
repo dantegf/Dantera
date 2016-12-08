@@ -1,13 +1,10 @@
-
-<h1>Add an item</h1>
-
-<%= simple_form_for @item, url: {action: "create"}, html: {class: "add_item"} do |f| %>
+<%= simple_form_for Item.new, url: {action: "create", controller: "items"}, html: {class: "add_item"} do |f| %>
   <h6>Reward</h6>
   <%= f.text_field :reward, :collection => [1, 2] %>
   <h6>Contact Info</h6>
   <div><%= f.text_field :contact, :placeholder => "Hello" %></div>
   <h6>Name</h6>
-  <div><%= f.text_field :name, :placeholder => "lol" %></div>
+  <div><%= f.text_field :name, :placeholder => "The name of your item" %></div>
   <h6>Description</h6>
   <div><%= f.text_area :description, size: "26x6" %></div>
   <div><%= f.submit "Create", method: "POST" %></div>
