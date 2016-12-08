@@ -49,6 +49,13 @@ class ItemsController < ApplicationController
     redirect_to '/items/new', :notice => "Your item has been deleted"
   end
 
+  def mail
+    user = User.first
+    UserMailer.creation_confirmation(user).deliver_now
+    redirect_to root_path, :notice => "Message sent"
+
+  end
+
   private
 
   def generate_code(item)

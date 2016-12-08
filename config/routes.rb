@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   resources :items
 
+  post '/items/:id/mail', to: 'items#mail'
+
   # get 'items/index'
 
   get 'items/show'
