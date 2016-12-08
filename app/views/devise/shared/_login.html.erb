@@ -3,5 +3,5 @@
 <% end %>
 
 <%- if controller_name != 'sessions' %>
-  <%= link_to "Log in", new_session_path(:user) %><br />
+  <div class="login-link"><%= link_to "Log in", new_session_path(:user) %><div>
 <% end -%>
