@@ -41,6 +41,7 @@ class ItemsController < ApplicationController
      @item = item.find(:all)
      render :action => 'edit'
     end
+
   end
 
   def destroy
@@ -50,9 +51,10 @@ class ItemsController < ApplicationController
   end
 
   def mail
+    item = Item.find(params[:id])
     user = User.first
-    UserMailer.creation_confirmation(user).deliver_now
-    redirect_to root_path, :notice => "Message sent"
+    UserMailer.email_to_owner(item).deliver_now
+    redirect_to 'users#index', :notice => "Message sent"
 
   end
 
