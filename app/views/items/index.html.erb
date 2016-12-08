@@ -5,13 +5,22 @@
 
     <% @items.each do |item| %>
       <div class="col-sm-4" style="border: 1px solid #dbdbdb">
+
+        <!-- <div class="container"> -->
+        <div class="row">
+        <div class="col-xs-7">
         <%= "# " + item.code %><br>
         <%= item.name %><br>
         <%= item.description %><br>
-        <%= item.reward %><br>
+        <%= item.reward %>
+        </div>
+        <div class="col-xs-5" style="border: 1px solid purple">
         <%= cl_image_tag item.photo, height: 100, width: 100, crop: :fill %>
-      </div>
-    <% end %>
+        </div>
+        </div>
+        <!-- </div> -->
 
+      </div> <!-- Closes Main -->
+    <% end %>
   </div>
 </div>
