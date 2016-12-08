@@ -41,12 +41,21 @@ class ItemsController < ApplicationController
      @item = item.find(:all)
      render :action => 'edit'
     end
+
   end
 
   def destroy
     @item = Item.find(params[:id])
     @item.destroy!
     redirect_to '/items/new', :notice => "Your item has been deleted"
+  end
+
+  def mail
+    item = Item.find(params[:id])
+    user = User.first
+    UserMailer.email_to_owner(item).deliver_now
+    redirect_to 'users#index', :notice => "Message sent"
+
   end
 
   private

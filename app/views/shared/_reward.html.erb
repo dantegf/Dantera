@@ -12,7 +12,7 @@
     <div class="col-xs-6 text-center">
       <h3>Email form below</h3>
         <div align="center">
-         <%= simple_form_for @item, url: {action: "create"}, html: {class: "add_item"} do |f| %>
+         <%= simple_form_for @item, url:  { action: 'mail', controller: 'items', id: @item.id }, method: "POST", html: {class: "add_item"} do |f| %>
             <p>Place your email: </p>
             <p><%= f.text_field :contact, placeholder: current_user.email %></p>
             <p>Place your phone: </p>
