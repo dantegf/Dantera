@@ -3,6 +3,15 @@
 
  users = [
  {
+   email: "a@a.com",
+   created_at:"",
+   updated_at:"",
+   username:"Giac",
+   location:"Barcelona",
+   password:"123456",
+   phone:"+34 553 555 222"
+ },
+ {
    email: "james@gmail.com",
    created_at:"",
    updated_at:"",
