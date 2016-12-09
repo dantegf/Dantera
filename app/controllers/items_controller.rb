@@ -61,13 +61,12 @@ class ItemsController < ApplicationController
     user = User.first
     UserMailer.email_to_owner(item).deliver_now
     redirect_to users_index_path, :notice => "Message sent"
-
   end
 
   def report_lost
     @item = Item.find(params[:id])
     @item.update_attributes(:reward => params[:reward])
-    redirect_to '/users/index'
+    redirect_to '/users/index', :notice => "Well done, " + @item.name + " has been marked as lost."
   end
 
   private
