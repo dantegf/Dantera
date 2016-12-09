@@ -10,7 +10,7 @@ gem 'devise'
 gem 'redis'
 gem 'cloudinary', '1.1.0'
 gem 'carrierwave'
-
+gem "letter_opener"
 gem 'sass-rails'
 gem 'jquery-rails'
 gem 'uglifier'
@@ -22,8 +22,6 @@ gem 'autoprefixer-rails'
 group :development, :test do
   gem 'binding_of_caller'
   gem 'better_errors'
-  gem "letter_opener"
-
   gem 'pry-byebug'
   gem 'pry-rails'
   gem 'spring'
