@@ -3,7 +3,7 @@ class UserMailer < ApplicationMailer
     #@user = user
     mail(
       to:       item.user.email,
-      subject:  "Your item was found was found!!"
+      subject:  "Your #{item.name} was found!!"
     )
   end
 end

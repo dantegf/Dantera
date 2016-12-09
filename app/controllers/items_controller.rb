@@ -60,7 +60,7 @@ class ItemsController < ApplicationController
     item = Item.find(params[:id])
     user = User.first
     UserMailer.email_to_owner(item).deliver_now
-    redirect_to 'users#index', :notice => "Message sent"
+    redirect_to users_index_path, :notice => "Message sent"
 
   end
 
