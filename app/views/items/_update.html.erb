@@ -1,0 +1,14 @@
+<%= simple_form_for Item.new do |f| %>
+
+  <h6>Item</h6>
+  <div><%= f.input :name, collection: Item.all, include_blank: false, label: false %></div>
+
+  <h6>Contact Info</h6>
+  <div><%= f.text_field :contact, placeholder: "E.g. your e-mail" %></div>
+
+  <h6>Reward</h6>
+  <div><%= f.text_field :reward, :placeholder => "Only numbers, no commas" %></div>
+  <!-- Submit -->
+  <div><%= f.submit "Confirm", method: "POST" %></div>
+
+<% end %>

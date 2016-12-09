@@ -19,8 +19,8 @@
 
       <div class="col-sm-6"> <!-- Right Div -->
         <ul class="list-unstyled">
-          <li class="btn-shortcut"><a href="#">Lost an Item</a></li>
-          <li class="btn-shortcut"><a href="#">Found an Item</a></li>
+          <li><button type="button" class="btn-as-link" style="border: none; background: none; padding: 0" data-toggle="modal" data-target="#modalLost">Lost an Item?</button></li>
+          <li class="btn-shortcut"><a href="#">Found an Item?</a></li>
         </ul>
       </div> <!-- Closes Right -->
 
@@ -29,7 +29,7 @@
 
 </div>
 
-<!-- Bootstrap Modal -->
+<!-- Bootstrap Modal for NEW -->
 <div class="modal fade" id="modalNew" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -45,6 +45,31 @@
 
       <div class="modal-body">
         <%= render "items/new" %>
+      </div>
+
+      <!-- <div class="modal-footer">
+        <button type="button" class="btn btn-primary">Sign Up</button>
+      </div> -->
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap Modal for LOST -->
+<div class="modal fade" id="modalLost" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <ul class="list-inline">
+        <li><h4 class="modal-title" id="myModalLabel">Report Lost Item</h4></li>
+        <!-- <li><h4> <%#= render "devise/shared/login" %></h4></li> -->
+        </ul>
+        <!-- <h6 class="modal-description">It's free and simple</h6> -->
+      </div>
+
+      <div class="modal-body">
+        <%= render "items/update" %>
       </div>
 
       <!-- <div class="modal-footer">
