@@ -6,21 +6,54 @@
     <% @items.each do |item| %>
       <div class="col-sm-4" style="border: 1px solid #dbdbdb">
 
-        <!-- <div class="container"> -->
         <div class="row">
         <div class="col-xs-7">
         <%= "# " + item.code %><br>
         <%= item.name %><br>
         <%= item.description %><br>
         <%= item.reward %>
+        <div><%= link_to "Delete", item_path(item),
+      method: :delete,
+      data: { confirm: "Are you sure?" } %></div>
         </div>
-        <div class="col-xs-5" style="border: 1px solid purple">
+        <!-- Between -->
+        <div class="col-xs-5" style="border: 1px solid #bababa">
         <%= cl_image_tag item.photo, height: 100, width: 100, crop: :fill %>
         </div>
         </div>
-        <!-- </div> -->
 
       </div> <!-- Closes Main -->
     <% end %>
+  </div>
+</div>
+
+<div class="bottom-link" align="center">
+  <button type="button" class="btn-as-link" style="border: none; background: none; padding: 0" data-toggle="modal" data-target="#modalNew">Add New </button> &nbsp;
+
+  <a href="/users/index">Back to Dashboard</a>
+</div>
+
+<!-- Bootstrap Modal -->
+<div class="modal fade" id="modalNew" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <ul class="list-inline">
+        <li><h4 class="modal-title" id="myModalLabel">Create New</h4></li>
+        <!-- <li><h4> <%#= render "devise/shared/login" %></h4></li> -->
+        </ul>
+        <!-- <h6 class="modal-description">It's free and simple</h6> -->
+      </div>
+
+      <div class="modal-body">
+        <%= render "items/new" %>
+      </div>
+
+      <!-- <div class="modal-footer">
+        <button type="button" class="btn btn-primary">Sign Up</button>
+      </div> -->
+    </div>
   </div>
 </div>

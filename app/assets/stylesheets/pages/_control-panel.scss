@@ -3,7 +3,7 @@ a {
 }
 
 a:hover {
-  color: purple
+  color: gray
 }
 
 .btn-as-link {
@@ -11,17 +11,17 @@ a:hover {
 }
 
 .btn-as-link:hover {
-  color: purple
+  color: gray
 }
 
 .btn-shortcut a {
   color: black;
-  background-color: orange
+  background-color: #bababa
 }
 
 .btn-shortcut a:hover {
   color: purple;
-  background-color: orange
+  background-color: #bababa
 }
 
 .login-link a {
