@@ -4,7 +4,10 @@ class ApplicationController < ActionController::Base
 
   def after_sign_in_path_for(resource)
     item_code = cookies[:search]
-    items_show_path({search: item_code})
+    if item_code
+      items_show_path({search: item_code})
+    else
+      users_index_path
+    end
   end
-
 end
