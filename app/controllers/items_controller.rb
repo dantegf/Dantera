@@ -5,12 +5,18 @@ class ItemsController < ApplicationController
     @items = Item.all
   end
 
+  skip_before_action :authenticate_user!, only: [ :show ]
   def show
     if params[:search]
       @item = Item.search(params[:search]).first
     end
     if @item.nil?
       redirect_to root_path, notice: 'try again, item does not exist'
+    else
+      if current_user.nil?
+      redirect_to new_user_registration_path
+      cookies[:search] = params[:search]
+      end
     end
   end
 

@@ -3,12 +3,8 @@
 <!-- Search Form -->
 <%= form_tag(items_show_path, :method => "get", id: "search-form") do %>
     <%= text_field_tag :search, params[:search], placeholder: "Insert Item ID" %>
-    <% if user_signed_in? %>
       <%= submit_tag "Search", :name => nil %>
-    <% else %>
-      <button type="button" class="search-btn" data-toggle="modal" data-target="#myModal">Search</button>
-    <% end %>
-<% end %>
+  <% end %>
 
 <!-- Bootstrap Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -27,18 +23,6 @@
       <div class="modal-body">
         <%= render "devise/registrations/new" %>
       </div>
-
-      <!-- <div class="modal-footer">
-        <button type="button" class="btn btn-primary">Sign Up</button>
-      </div> -->
     </div>
   </div>
 </div>
-
-<!--
-<% if user_signed_in? %>
-  <h1>Yep</h1>
-<% else %>
-  <h1>Not logged in</h1>
-<% end %>
--->
