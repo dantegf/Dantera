@@ -69,7 +69,7 @@
  },
  {
    user: User.all.sample,
-   name: "Backbag",
+   name: "Backpack",
    description: "Black Swiss Bag",
    code: "43RGtk",
    reward: "10.00",
