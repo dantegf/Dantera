@@ -7,6 +7,8 @@ Rails.application.routes.draw do
 
   get 'items/show'
 
+  post 'items/report_lost'
+
   # get 'items/new'
 
   # post 'items/create'

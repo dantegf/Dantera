@@ -64,6 +64,12 @@ class ItemsController < ApplicationController
 
   end
 
+  def report_lost
+    @item = Item.find(params[:id])
+    @item.update_attributes(:reward => params[:reward])
+    redirect_to '/users/index'
+  end
+
   private
 
   def generate_code(item)
