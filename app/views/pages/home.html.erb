@@ -1,10 +1,14 @@
-<h1>Manage Anything, Anywhere</h1>
+<h1 class="home-title" align="center">Manage Anything, Anywhere</h1>
 
+<div align="center">
 <!-- Search Form -->
 <%= form_tag(items_show_path, :method => "get", id: "search-form") do %>
-    <%= text_field_tag :search, params[:search], placeholder: "Insert Item ID" %>
-      <%= submit_tag "Search", :name => nil %>
+
+    <%= text_field_tag :search, params[:search], placeholder: "Insert Item ID", class: "search-bar" %>
+    <%= submit_tag "Search", :name => nil, class: "search-btn" %>
+
   <% end %>
+</div>
 
 <!-- Bootstrap Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
