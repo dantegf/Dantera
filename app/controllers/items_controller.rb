@@ -11,7 +11,7 @@ class ItemsController < ApplicationController
       @item = Item.search(params[:search]).first
     end
     if @item.nil?
-      redirect_to root_path, notice: 'try again, item does not exist'
+      redirect_to root_path, notice: 'Try again! No items found.'
     else
       if current_user.nil?
       redirect_to new_user_registration_path

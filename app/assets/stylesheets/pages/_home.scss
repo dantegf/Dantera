@@ -3,15 +3,38 @@
  * (margin/padding adjustments)
  * ------------------------------------- */
 
+
+.home-title {
+  // color: purple;
+  margin-bottom: 22px;
+  font-family: 'Abel', sans-serif;
+  // font-weight: bold
+}
+
 .search-bar {
-  //
+  height: 43px;
+  width: 215px;
+  padding-left: 16px;
+  border: 1px solid #999999;
+  border-radius: 3px;
+  // color: #d6d6d6
 }
 
 .search-btn {
   color: white;
   background-color: #0197f6;
   border: none;
-  border-radius: 2px;
-  padding: 10px 20px
+  border-radius: 3px;
+  padding: 10px 20px;
+  transition: 0.5s
 }
 
+.search-btn:hover {
+  background-color: #2a2a72;
+  border: none;
+  transition: 0.5s
+}
+
+.search-btn:active {
+  //
+}
