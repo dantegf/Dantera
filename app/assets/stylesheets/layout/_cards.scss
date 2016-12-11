@@ -1,3 +1,23 @@
+.card-row {
+  //
+}
+
+.padded {
+  padding: 6px;
+  height: 280px
+}
+
+.main-card {
+  width: 100%;
+  height: 100%;
+  padding-top: 20px;
+  padding-left: 28px;
+  padding-right: 28px;
+  border: 1px solid #dbdbdb;
+  border-radius: 3px;
+  background-color: #f9f9f9;
+}
+
 .my-items {
   color: #212121;
   margin-top: 40px;
@@ -6,10 +26,29 @@
   font-family: 'Abel', sans-serif;
 }
 
+#the-hash {
+  font-size: 24px;
+  color: #606060;
+  font-weight: lighter
+}
+
 .code-big {
   font-size: 30px;
   font-family: 'Abel', sans-serif;
-  font-weight: bold
+  font-weight: bold;
+  margin-bottom: 6px
+}
+
+.item-name {
+  font-size: 20px;
+  font-family: 'Abel', sans-serif;
+  font-weight: bold;
+  margin-bottom: 20px;
+  padding-left: 10px
+}
+
+.delete-link a {
+  margin-bottom: 10px
 }
 
 .card {
@@ -19,3 +58,8 @@
 .card a {
   color: #2a2a72;
 }
+
+.card-img {
+  margin-top: 16px
+}
+

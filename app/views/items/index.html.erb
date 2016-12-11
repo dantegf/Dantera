@@ -4,26 +4,30 @@
   <div class="row">
 
     <% @items.each do |item| %>
-      <div class="col-sm-4" style="border: 1px solid #dbdbdb; height: 180px">
 
-        <div class="row">
+      <div class="col-sm-4 padded">
+      <div class="main-card">
+
+        <div class="row card-row">
         <div class="col-xs-7 card">
-        <div class="code-big"><em><%= "# " + item.code.upcase %></em></div>
-        <div><%= item.name %></div>
+        <div class="code-big"><em><span id="the-hash"># </span><%= item.code.upcase %></em></div>
+        <div class="item-name"><%= item.name %></div>
         <div><%= item.description %></div>
-        <%= item.reward %>
-        <div><%= link_to "Delete", item_path(item),
+        <div><%= "Reward: $" + item.reward.to_s + ".00" %></div>
+        <div class="delete-link"><%= link_to "Delete", item_path(item),
       method: :delete,
       data: { confirm: "Are you sure?" } %></div>
         </div>
         <!-- Between -->
-        <div class="col-xs-5" style="border: 1px solid #bababa">
+        <div class="col-xs-4 card-img" style="border: 1px solid #bababa">
         <%= cl_image_tag item.photo, height: 100, width: 100, crop: :fill %>
         </div>
         </div>
 
-      </div> <!-- Closes Main -->
+      </div> <!-- Closes main-card -->
+    </div>
     <% end %>
+    </div>
   </div>
 </div>
 
