@@ -12,9 +12,9 @@
   height: 100%;
   padding-top: 20px;
   padding-left: 28px;
-  padding-right: 28px;
+  padding-right: 0;
   border: 1px solid #dbdbdb;
-  border-radius: 3px;
+  border-radius: 4px;
   background-color: #f9f9f9;
 }
 
@@ -39,20 +39,27 @@
 }
 
 .item-name {
-  font-size: 20px;
+  font-size: 21px;
   font-family: 'Abel', sans-serif;
   font-weight: bold;
-  margin-bottom: 20px;
+  margin-bottom: 26px;
   padding-left: 10px
 }
 
+.item_info {
+  //
+}
+
 .reward {
-  padding-bottom: 20px
+  padding-top: 7px;
+  padding-bottom: 30px;
 }
 
 .delete-link a {
   padding-bottom: 30px;
   color: #ad2222;
+  font-weight: bold;
+  padding-left: 10px
 }
 
 .delete-link a:hover {
@@ -65,6 +72,55 @@
 }
 
 .card-img {
-  margin-top: 16px
+  background-color: white;
+  margin-top: 16px;
+  border-radius: 4px;
+  width: 102px;
+  height: 102px;
+  border: 1px solid #bababa;
+  padding: 0;
+  box-shadow: inset 0 0 30px #f4f4f4;
 }
 
+.bottom-link {
+  margin-top: 20px
+}
+
+.add-new {
+  color: white;
+  background-color: #0197f6;
+  box-shadow: inset 0 0 16px #028de5;
+  border: none;
+  border-radius: 3px;
+  padding: 10px 20px;
+  transition: 0.5s
+}
+
+.add-new:hover {
+  background-color: #2a2a72;
+  box-shadow: none;
+  border: none;
+  transition: 0.5s
+}
+
+.in-between {
+  width: 12px
+}
+
+.dash-link a {
+  color: white;
+  background-color: #0197f6;
+  box-shadow: inset 0 0 16px #028de5;
+  border: none;
+  border-radius: 3px;
+  padding: 10px 20px;
+  transition: 0.5s
+}
+
+.dash-link:hover a {
+  color: white;
+  background-color: #2a2a72;
+  box-shadow: none;
+  border: none;
+  transition: 0.5s
+}
