@@ -12,14 +12,14 @@
         <div class="col-xs-7 card">
         <div class="code-big"><em><span id="the-hash"># </span><%= item.code.upcase %></em></div>
         <div class="item-name"><%= item.name %></div>
-        <div><%= item.description %></div>
+        <div class="item-info"><%= item.description %></div>
         <div class="reward"><%= "Reward: $" + item.reward.to_s + ".00" %></div>
         <div class="delete-link"><%= link_to "Delete", item_path(item),
       method: :delete,
       data: { confirm: "Are you sure?" } %></div>
         </div>
         <!-- Between -->
-        <div class="col-xs-4 card-img" style="border: 1px solid #bababa">
+        <div class="col-xs-4 card-img">
         <%= cl_image_tag item.photo, height: 100, width: 100, crop: :fill %>
         </div>
         </div>
@@ -32,9 +32,14 @@
 </div>
 
 <div class="bottom-link" align="center">
-  <button type="button" class="btn-as-link" style="border: none; background: none; padding: 0" data-toggle="modal" data-target="#modalNew">Add New </button> &nbsp;
 
-  <a href="/users/index">Back to Dashboard</a>
+  <ul class="list-inline">
+
+    <li><button type="button" class="add-new" data-toggle="modal" data-target="#modalNew">Add New</button></li>
+    <li><div class="in-between"></div></li>
+    <li class="dash-link"><a href="/users/index">Dashboard</a></li>
+  </ul>
+
 </div>
 
 <!-- Bootstrap Modal -->
