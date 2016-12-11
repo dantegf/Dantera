@@ -1,16 +1,16 @@
-<h2 align="center">My Items</h2>
+<h2 align="center" class="my-items">My Items</h2>
 
 <div class="container">
   <div class="row">
 
     <% @items.each do |item| %>
-      <div class="col-sm-4" style="border: 1px solid #dbdbdb">
+      <div class="col-sm-4" style="border: 1px solid #dbdbdb; height: 180px">
 
         <div class="row">
-        <div class="col-xs-7">
-        <%= "# " + item.code %><br>
-        <%= item.name %><br>
-        <%= item.description %><br>
+        <div class="col-xs-7 card">
+        <div class="code-big"><em><%= "# " + item.code.upcase %></em></div>
+        <div><%= item.name %></div>
+        <div><%= item.description %></div>
         <%= item.reward %>
         <div><%= link_to "Delete", item_path(item),
       method: :delete,
