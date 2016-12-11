@@ -1,13 +1,13 @@
 <%= simple_form_for Item.new, url: {action: "create", controller: "items"}, html: {class: "add_item"} do |f| %>
 
-  <h6>Name</h6>
-  <div><%= f.text_field :name, :placeholder => "Name of the item" %></div>
-   <h6>Contact Info</h6>
-  <div><%= f.text_field :contact, placeholder: "E.g. your e-mail" %></div>
-  <h6>$ Reward</h6>
-  <%= f.text_field :reward, :placeholder => "Only numbers, no dot" %>
+  <h6>Item name</h6>
+  <div><%= f.text_field :name, placeholder: "ie: Gucci wallet" %></div>
+   <h6>Contact info</h6>
+  <div><%= f.text_field :contact, value: current_user.email %></div>
+  <h6>Default reward</h6>
+  <%= f.text_field :reward, placeholder: "$ .00" %>
   <h6>Description</h6>
-  <div><%= f.text_area :description, size: "26x6" %></div>
+  <div><%= f.text_area :description, placeholder: "describe your item color, size, function etc..", size: "26x6" %></div>
   <!-- Uploading Photo-->
   <div><%= f.input :photo %></div>
   <%= f.input :photo_cache, as: :hidden %>
