@@ -13,7 +13,7 @@
         <div class="code-big"><em><span id="the-hash"># </span><%= item.code.upcase %></em></div>
         <div class="item-name"><%= item.name %></div>
         <div><%= item.description %></div>
-        <div><%= "Reward: $" + item.reward.to_s + ".00" %></div>
+        <div class="reward"><%= "Reward: $" + item.reward.to_s + ".00" %></div>
         <div class="delete-link"><%= link_to "Delete", item_path(item),
       method: :delete,
       data: { confirm: "Are you sure?" } %></div>
