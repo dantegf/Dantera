@@ -9,10 +9,14 @@
 
     <% if user_signed_in? %>
     <!-- Button (call-to-action) -->
-    <%= link_to t(".top_call_to_action", default: "Add New"), "#", class: "navbar-wagon-item navbar-wagon-link btn" %>
+    <%#= link_to t(".top_call_to_action", default: "ADD ITEM"), "#", class: "navbar-wagon-item navbar-wagon-link btn" %>
+    <!-- New with modal -->
+    <button type="button" class="navbar-wagon-item navbar-wagon-button" data-toggle="modal" data-target="#modalNew">ADD ITEM</button>
 
     <!-- Button (call-to-action) -->
-    <%= link_to t(".top_call_to_action", default: "Report Lost"), "#", class: "navbar-wagon-item navbar-wagon-link btn" %>
+    <%#= link_to t(".top_call_to_action", default: "REPORT LOST"), "#", class: "navbar-wagon-item navbar-wagon-link btn" %>
+    <!-- New with link to "Report Lost Page" -->
+    <button type="button" class="navbar-wagon-item navbar-wagon-button" data-toggle="modal" data-target="#modalNew">REPORT LOST</button>
 
     <!-- Different navigation if login or not -->
 
@@ -34,8 +38,8 @@
       </div>
         <% else %>
       <!-- Login text link -->
-      <%= link_to t(".sign_in", default: "LOG IN"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-button" %>
-      <%= link_to t(".sign_up", default: "SIGN UP"), new_user_registration_path, class: "navbar-wagon-item navbar-wagon-button" %>
+      <%= link_to t(".sign_in", default: "LOG IN"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-button-bordered" %>
+      <%= link_to t(".sign_up", default: "SIGN UP"), new_user_registration_path, class: "navbar-wagon-item navbar-wagon-button-bordered" %>
     <% end %>
   </div>
 

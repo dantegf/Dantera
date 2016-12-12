@@ -44,25 +44,40 @@
   font-size: 14px;
 }
 .navbar-wagon-link:hover {
+  background-color: #309ce1;
   color: #2a2a72;
   text-decoration: none;
 }
 
-/* Navbar right button */
 .navbar-wagon-button {
-  margin-left: 10px;
-  background-color: none;
+  margin-left: 0;
+  background-color: #309ce1;
   padding: 0 20px;
+  border: none;
   border-radius: 2px;
   line-height: 40px;
   color: white;
   font-size: 14px;
-  border: 2px solid white
+}
+
+.navbar-wagon-button a {
+  background-color: #309ce1;
 }
 
 .navbar-wagon-button:hover {
   color: #2a2a72;
   text-decoration: none;
+}
+
+.navbar-wagon-button-bordered {
+  margin-left: 20px;
+  background-color: #309ce1;
+  padding: 0 20px;
+  border: 2px solid white;
+  border-radius: 2px;
+  line-height: 40px;
+  color: white;
+  font-size: 14px;
 }
 
 /* Navbar search form */
