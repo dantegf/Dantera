@@ -24,16 +24,16 @@
         </div>
     </div> -->
   <div class="col-xs-6 text-center">
-    <h3>Email form below</h3>
+    <h3>Contact the Owner</h3>
       <div align="center">
       <%= form_tag( { controller: "items", action: "mail", method: "POST" }, {class: "add_item" } ) %>
       <%= hidden_field_tag(:item_id, @item.id) %>
-        <p>Place your email: </p>
+        <p>Email: </p>
         <p><%= text_field_tag :email %></p>
-        <p>Place your phone #: </p>
+        <p>Phone (optional): </p>
         <p><%= text_field_tag :phone_number %></p>
-        <p>Place your message: </p>
-        <%= text_area_tag(:message, "Share the good new, tell the owner you found their #{@item.name}!! :)", size: "38x9") %>
+        <p>Your message: </p>
+        <%= text_area_tag(:message, "Hi, I've just found your #{@item.name}! Let me know how I can return it to you.", size: "38x9") %>
         <p><%= submit_tag("Send") %></p>
       </div>
     </div>
