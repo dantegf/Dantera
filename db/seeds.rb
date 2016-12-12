@@ -3,7 +3,7 @@
 
  users = [
  {
-   email: "dante.fereghetti+what@gmail.com",
+   email: "a@a.com",
    created_at:"",
    updated_at:"",
    username:"Giac",
