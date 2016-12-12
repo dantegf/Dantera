@@ -9,14 +9,13 @@ class ItemsController < ApplicationController
     item = Item.find(params[:id])
     user = User.first
     UserMailer.email_to_owner(item).deliver_now
-    redirect_to users_index_path, :notice => "Message sent"
+    redirect_to root_path, notice: "Thank you! The item owner will contact you shortly"
   end
 
   skip_before_action :authenticate_user!, only: [ :show, :mail ]
   def show
     if params[:search]
       @item = Item.search(params[:search]).first
-      sorry = Item.search(params[:search])
     end
     if @item.nil?
       redirect_to root_path, notice: 'Sorry, that code is not valid. Try again.'
