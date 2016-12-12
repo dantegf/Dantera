@@ -5,6 +5,8 @@ Rails.application.routes.draw do
 
   # get 'items/index'
 
+  get 'items/code'
+
   get 'items/show'
 
   post 'items/report_lost'
