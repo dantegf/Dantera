@@ -6,9 +6,13 @@ class ItemsController < ApplicationController
   end
 
   def mail
-    item = Item.find(params[:id])
+    item = Item.find(params[:item_id])
     user = User.first
-    UserMailer.email_to_owner(item).deliver_now
+    message = params[:message]
+    phone_number = params[:phone_number]
+    email = params[:email]
+    UserMailer.email_to_finder(item, message, email).deliver_now
+    UserMailer.email_to_owner(item, message, phone_number, email).deliver_now
     redirect_to root_path, notice: "Thank you! The item owner will contact you shortly."
   end
 
