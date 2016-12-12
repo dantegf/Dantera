@@ -5,21 +5,23 @@
 
 <div align="center">
 <!-- Search Form -->
-<%= form_tag(items_show_path, :method => "get", id: "search-form") do %>
-
+  <%= form_tag(items_show_path, :method => "get", id: "search-form") do %>
     <%= text_field_tag :search, params[:search], placeholder: "Insert Item ID", class: "search-bar" %>
     <%= submit_tag "Search", :name => nil, class: "search-btn" %>
-
   <% end %>
 </div>
 
+<!-- Register new item button -->
   <div>
-
-  <%= submit_tag "Search", :name => nil, class: "search-btn" %>
-
+  <br>
+  <br>
+  <br>
+    <!-- GIAC, THIS IS NOT WORKING YET, I'LL FIX IT TOMORROW :( -->
+    <p>Using Dantera is free and easy, try it! :)</p>
+    <%= submit_tag "Register items", :name => nil, class: "search-btn" %>
   </div>
-
-</div> <!-- Closes Banner -->
+<!-- Closes Banner -->
+</div>
 
 <!-- Bootstrap Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
