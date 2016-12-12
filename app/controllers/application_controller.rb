@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
     if item_code
       items_show_path({search: item_code})
     else
-      users_index_path
+      items_path
     end
   end
 end
