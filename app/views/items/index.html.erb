@@ -1,9 +1,9 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-4">
+      <h2 align="center" class="my-items">My Items</h2>
     </div>
     <div class="col-xs-4">
-      <h2 align="center" class="my-items">My Items</h2>
     </div>
     <div class="col-xs-4">
       <div class="bottom-link" align="center">
@@ -11,7 +11,7 @@
 
     <li><button type="button" class="add-new" data-toggle="modal" data-target="#modalNew">Add New</button></li>
     <li><div class="in-between"></div></li>
-    <li class="dash-link"><a href="/users/index">Dashboard</a></li>
+    <li class="dash-link"><a href="/users/index">Report Lost</a></li>
   </ul>
 </div>
     </div>
@@ -27,9 +27,14 @@
       <div class="main-card">
 
         <div class="row card-row">
+
+        <div class="col-xs-4 card-img">
+        <%= cl_image_tag item.photo, height: 100, width: 100, crop: :fill %>
+        </div>
+        <!-- Between -->
         <div class="col-xs-7 card">
-        <div class="code-big"><em><span id="the-hash"># </span><%= item.code.upcase %></em></div>
         <div class="item-name"><%= item.name %></div>
+        <div class="code-big"><em><span id="the-hash"># </span><%= item.code.upcase %></em></div>
         <div class="item-info"><%= item.description %></div>
         <div class="reward"><%= "Reward: $" + item.reward.to_s + ".00" %></div>
         <div class="delete-link"><%= link_to "Delete", item_path(item),
@@ -37,10 +42,7 @@
       data: { confirm: "Are you sure?" } %></div>
       <div class="code-link"><a href="/users/new">Print Code</a></div>
         </div>
-        <!-- Between -->
-        <div class="col-xs-4 card-img">
-        <%= cl_image_tag item.photo, height: 100, width: 100, crop: :fill %>
-        </div>
+
         </div>
 
       </div> <!-- Closes main-card -->
