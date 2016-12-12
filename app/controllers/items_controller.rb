@@ -9,10 +9,11 @@ class ItemsController < ApplicationController
   def show
     if params[:search]
       @item = Item.search(params[:search]).first
+      sorry = Item.search(params[:search])
     end
     if @item.nil?
-      redirect_to root_path, notice: 'Try again! No items found.'
-    #else
+      redirect_to root_path, notice: 'Sorry, that code is not valid. Try again.'
+      #else
       #if current_user.nil?
       #redirect_to new_user_registration_path
       #cookies[:search] = params[:search]
