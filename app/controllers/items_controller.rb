@@ -5,7 +5,14 @@ class ItemsController < ApplicationController
     @items = Item.all
   end
 
-  skip_before_action :authenticate_user!, only: [ :show ]
+  def mail
+    item = Item.find(params[:id])
+    user = User.first
+    UserMailer.email_to_owner(item).deliver_now
+    redirect_to users_index_path, :notice => "Message sent"
+  end
+
+  skip_before_action :authenticate_user!, only: [ :show, :mail ]
   def show
     if params[:search]
       @item = Item.search(params[:search]).first
@@ -55,13 +62,6 @@ class ItemsController < ApplicationController
     @item = Item.find(params[:id])
     @item.destroy!
     redirect_to '/items', :notice => "Your item has been deleted"
-  end
-
-  def mail
-    item = Item.find(params[:id])
-    user = User.first
-    UserMailer.email_to_owner(item).deliver_now
-    redirect_to users_index_path, :notice => "Message sent"
   end
 
   def report_lost
