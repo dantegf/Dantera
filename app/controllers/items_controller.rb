@@ -9,7 +9,7 @@ class ItemsController < ApplicationController
     item = Item.find(params[:id])
     user = User.first
     UserMailer.email_to_owner(item).deliver_now
-    redirect_to root_path, notice: "Thank you! The item owner will contact you shortly"
+    redirect_to root_path, notice: "Thank you! The item owner will contact you shortly."
   end
 
   skip_before_action :authenticate_user!, only: [ :show, :mail ]
