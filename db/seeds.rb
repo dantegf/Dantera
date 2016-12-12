@@ -12,48 +12,48 @@
    phone:"+34 553 555 222"
  },
  {
-   email: "james@gmail.com",
+   email: "dante.fereghetti@gmail.com",
    created_at:"",
    updated_at:"",
    username:"James",
    location:"Barcelona",
-   password:"11111111111",
+   password:"123456",
    phone:"+34 553 555 222"
  },
  {
-   email: "peter@gmail.com",
+   email: "dante.fereghetti@gmail.com",
    created_at:"",
    updated_at:"",
    username:"Peter",
    location:"Sao Paulo",
-   password:"11111111111",
+   password:"123456",
    phone:"+34 553 555 222"
  },
  {
-   email: "ruby@gmail.com",
+   email: "dante.fereghetti@gmail.com",
    created_at:"",
    updated_at:"",
    username:"Ruby",
    location:"Hong Kong",
-   password:"11111111111",
+   password:"123456",
    phone:"+34 553 555 222"
  },
  {
-   email: "yu@gmail.com",
+   email: "dante.fereghetti@gmail.com",
    created_at:"",
    updated_at:"",
    username:"Yu",
    location:"Beijing",
-   password:"11111111111",
+   password:"123456",
    phone:"+34 553 555 222"
  },
  {
-   email: "arata@gmail.com",
+   email: "dante.fereghetti@gmail.com",
    created_at:"",
    updated_at:"",
    username:"Arata",
    location:"Tokyo",
-   password:"11111111111",
+   password:"123456",
    phone:"+34 553 555 222"
  },
  ]

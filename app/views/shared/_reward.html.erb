@@ -14,9 +14,9 @@
         <div align="center">
          <%= simple_form_for @item, url:  { action: 'mail', controller: 'items', id: @item.id }, method: "POST", html: {class: "add_item"} do |f| %>
             <p>Place your email: </p>
-            <p><%= f.text_field :contact, value: current_user.email %></p>
+            <p><%= f.text_field :contact, placeholder: "your email" %></p>
             <p>Place your phone: </p>
-            <p><%= f.text_field :contact, value: current_user.phone %></p>
+            <p><%= f.text_field :contact, placeholder: "your phone #" %></p>
             <%= f.text_area :message, placeholder: "Share the good new, tell the owner you found their #{@item.name}!! :)", size: "38x9" %>
             <br>
             <%= f.submit "Create" %>

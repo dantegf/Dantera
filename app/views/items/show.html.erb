@@ -1,5 +1,5 @@
 
-<% if @item.user_id == current_user.id %>
+<% if current_user && (@item.user_id == current_user.id) %>
 
 <ul>
 <br>
