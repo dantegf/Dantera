@@ -3,7 +3,7 @@
 
  users = [
  {
-   email: "a@a.com",
+   email: "dante.fereghetti+what@gmail.com",
    created_at:"",
    updated_at:"",
    username:"Giac",
@@ -12,7 +12,7 @@
    phone:"+34 553 555 222"
  },
  {
-   email: "b@b.com",
+   email: "dante.fereghetti+something@gmail.com",
    created_at:"",
    updated_at:"",
    username:"James",
@@ -21,7 +21,7 @@
    phone:"+34 553 555 222"
  },
  {
-   email: "c@c.com",
+   email: "dantefereghetti+something@gmail.com",
    created_at:"",
    updated_at:"",
    username:"Peter",
@@ -30,7 +30,7 @@
    phone:"+34 553 555 222"
  },
  {
-   email: "d@d.com",
+   email: "dantefereghetti@gmail.com",
    created_at:"",
    updated_at:"",
    username:"Ruby",
@@ -39,7 +39,7 @@
    phone:"+34 553 555 222"
  },
  {
-   email: "e@e.com",
+   email: "giacomom984@gmail.com",
    created_at:"",
    updated_at:"",
    username:"Yu",
