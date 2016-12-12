@@ -52,17 +52,29 @@
 
 .reward {
   padding-top: 7px;
-  padding-bottom: 30px;
+  padding-bottom: 10px;
 }
 
 .delete-link a {
-  padding-bottom: 30px;
+  // padding-bottom: 30px;
   color: #ad2222;
   font-weight: bold;
   padding-left: 10px
 }
 
 .delete-link a:hover {
+  margin-bottom: 10px;
+  color: #d82222;
+}
+
+.code-link a {
+  padding-bottom: 30px;
+  color: #ad2222;
+  font-weight: bold;
+  padding-left: 10px
+}
+
+.code-link a:hover {
   margin-bottom: 10px;
   color: #d82222;
 }
