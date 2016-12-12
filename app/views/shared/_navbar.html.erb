@@ -7,14 +7,15 @@
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
 
+    <% if user_signed_in? %>
     <!-- Button (call-to-action) -->
-    <%= link_to t(".top_call_to_action", default: "CONTACT"), "#", class: "navbar-wagon-item navbar-wagon-link btn" %>
+    <%= link_to t(".top_call_to_action", default: "Add New"), "#", class: "navbar-wagon-item navbar-wagon-link btn" %>
 
     <!-- Button (call-to-action) -->
-    <%= link_to t(".top_call_to_action", default: "ABOUT"), "#", class: "navbar-wagon-item navbar-wagon-link btn" %>
+    <%= link_to t(".top_call_to_action", default: "Report Lost"), "#", class: "navbar-wagon-item navbar-wagon-link btn" %>
 
     <!-- Different navigation if login or not -->
-    <% if user_signed_in? %>
+
       <!-- Profile picture and dropdown -->
       <div class="navbar-wagon-item">
         <div class="dropdown">
