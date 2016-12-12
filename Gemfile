@@ -6,7 +6,6 @@ gem 'puma'
 gem 'pg'
 gem 'figaro'
 gem 'jbuilder', '~> 2.0'
-
 gem 'devise'
 gem 'redis'
 gem 'cloudinary', '1.1.0'
@@ -19,6 +18,7 @@ gem 'bootstrap-sass'
 gem 'font-awesome-sass'
 gem 'simple_form'
 gem 'autoprefixer-rails'
+gem 'postmark-rails'
 
 group :development, :test do
   gem 'binding_of_caller'

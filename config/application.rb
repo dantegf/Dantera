@@ -26,4 +26,19 @@ module Dantera
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
   end
+
+config.action_mailer.delivery_method = :postmark
+config.action_mailer.postmark_settings = { :api_token => "b1550ea7-dc69-4222-bd0c-c8efcde3c4ae" }
+
+# Send the email
+class TestMailer < ActionMailer::Base
+  def message
+    mail(
+      :subject => 'Hello from Postmark',
+      :to  => 'dante.fereghetti@gmail.com',
+      :from => 'help@dantera.org',
+      :html_body => '<strong>Hello</strong> dear Postmark user.',
+      :track_opens => 'true')
+  end
+end
 end
