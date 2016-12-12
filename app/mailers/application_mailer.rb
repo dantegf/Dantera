@@ -1,4 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'goodnews@dantera.com'
+  default from: 'help@dantera.com'
   layout 'mailer'
 end

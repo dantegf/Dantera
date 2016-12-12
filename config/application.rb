@@ -27,9 +27,6 @@ module Dantera
     # -- all .rb files in that directory are automatically loaded.
   end
 
-config.action_mailer.delivery_method = :postmark
-config.action_mailer.postmark_settings = { :api_token => "b1550ea7-dc69-4222-bd0c-c8efcde3c4ae" }
-
 # Send the email
 class TestMailer < ActionMailer::Base
   def message
