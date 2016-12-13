@@ -4,7 +4,7 @@ class ItemsController < ApplicationController
   skip_before_action :authenticate_user!, only: [ :show, :mail, :new, :create ]
 
   def index
-    @items = Item.all
+    @items = Item.where(user_id: current_user.id)
   end
 
   def mail
@@ -24,11 +24,6 @@ class ItemsController < ApplicationController
     end
     if @item.nil?
       redirect_to root_path, notice: 'Sorry, that code is not valid. Try again.'
-      #else
-      #if current_user.nil?
-      #redirect_to new_user_registration_path
-      #cookies[:search] = params[:search]
-      #end
     end
   end
 
