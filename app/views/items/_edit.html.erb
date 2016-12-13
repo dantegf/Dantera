@@ -1,10 +1,10 @@
 <%= form_tag('/items/report_lost') do |f| %>
 
-  <h6>Item</h6>
+  <h6>Item:</h6>
   <div><%= select_tag "id", options_from_collection_for_select(Item.all, "id", "name"), include_blank: false, label: false %></div>
 
-  <h6>Set a reward?</h6>
-  <div><%= text_field_tag "$ 10.00", nil, placeholder: "$ 20.00" %></div>
+  <h6>Set a $ Reward:</h6>
+  <div><%= text_field_tag "reward", nil, placeholder: "20" %></div>
   <!-- Submit -->
 
   <div><%= submit_tag "Confirm", method: "POST" %></div>

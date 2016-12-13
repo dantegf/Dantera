@@ -16,23 +16,25 @@
     <!-- Button (call-to-action) -->
     <%#= link_to t(".top_call_to_action", default: "REPORT LOST"), "#", class: "navbar-wagon-item navbar-wagon-link btn" %>
     <!-- New with link to "Report Lost Page" -->
-    <button type="button" class="navbar-wagon-item navbar-wagon-button" data-toggle="modal" data-target="#modalNew">REPORT LOST</button>
+    <button type="button" class="navbar-wagon-item navbar-wagon-button" data-toggle="modal" data-target="#modalReport">REPORT LOST</button>
 
     <!-- Different navigation if login or not -->
 
-      <!-- Profile picture and dropdown -->
+      <!-- Avatar and Dropdown -->
       <div class="navbar-wagon-item">
         <div class="dropdown">
           <%= image_tag "http://www.gamesindustry.biz/img/base/default-user.png", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
           <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-            <strong><li>
-              <%= link_to "/users/index" do %>
-                <i class="fa fa-user"></i> <%= t(".dashboard", default: "Dashboard") %>
+              <!-- My Items -->
+              <li><%= link_to "/items" do %>
+                <i class="fa fa-user"></i> <%= t(".dashboard", default: "My Items") %></li>
               <% end %>
-              <%= link_to destroy_user_session_path, method: :delete do %>
-                <i class="fa fa-sign-out"></i>  <%= t(".sign_out", default: "Log out") %>
+              <!-- Privacy -->
+              <li class="privacy-link"><%= link_to "Privacy Settings", "#" %></li>
+              <!-- Log Out -->
+              <li class="logout-link"><%= link_to destroy_user_session_path, method: :delete do %>
+                <i class="fa fa-sign-out"></i>  <%= t(".sign_out", default: "Log out") %></li>
               <% end %>
-            </li></strong>
           </ul>
         </div>
       </div>
@@ -59,5 +61,26 @@
       </ul>
     </div>
 
+  </div>
+</div>
+
+<!-- Bootstrap Modal -->
+<div class="modal fade" id="modalReport" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <ul class="list-inline">
+        <li><h4 class="modal-title" id="myModalLabel">Report Lost Item</h4></li>
+        <li><h4> <%#= render "devise/shared/login" %></h4></li>
+        </ul>
+        <h6 class="modal-description">It's free and simple</h6>
+      </div>
+
+      <div class="modal-body">
+        <%= render "/items/edit" %>
+      </div>
+    </div>
   </div>
 </div>

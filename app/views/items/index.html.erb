@@ -2,6 +2,9 @@
   <div class="row">
     <div class="col-xs-4">
       <h2 align="center" class="my-items">My Items</h2>
+
+      <!-- test -->
+
     </div>
     <div class="col-xs-4">
     </div>
@@ -30,20 +33,23 @@
               <%= cl_image_tag item.photo, height: 100, width: 100, crop: :fill %>
             </div>
 
-            <div>
+            <div class="name-n-code">
             <ul class="list-unstyled">
-              <li><%= item.name %></li>
-              <li><em><span id="the-hash"># </span><%= item.code %></em></li>
+              <li class="item-name"><%= item.name %></li>
+              <li><em><span id="the-hash"># </span><span id="item-code"><%= item.code %></span></em></li>
             </ul>
-            </div><br>
+            </div>
 
           <div class="item-info"><%= item.description %></div>
           <div class="reward"><%= "Reward: $" + item.reward.to_s + ".00" %></div>
-          <div class="delete-link"><%= link_to "Delete", item_path(item),
-      method: :delete,
-      data: { confirm: "Are you sure?" } %></div>
-      <div class="code-link"><a href="/users/new">Print Code</a></div>
 
+          <ul class="list-inline card-bottom">
+          <li><div class="print-code-link"><a href="/users/new">Print Code</a></div></li>
+          <li><div class="in-between-bottom"></div></li>
+          <li><div class="delete-link"><i class="fa fa-trash" aria-hidden="true"></i><%= link_to "Remove", item_path(item),
+      method: :delete,
+      data: { confirm: "Are you sure?" } %></div></li>
+          </ul>
 
       </div> <!-- Closes main-card -->
     </div>
