@@ -25,7 +25,8 @@
 
 .great h1 {
   font-size: 45px;
-  color: #39b048
+  color: #39b048;
+  // text-shadow: 0 0 10px #ffffff
 }
 
 .below-title {
@@ -33,13 +34,14 @@
   width: 600px;
   color: #333333;
   padding-top: 10px;
-  margin-bottom: 22px;
+  margin-bottom: 38px;
   font-size: 29px;
+  line-height: 140%;
   font-family: 'Abel', sans-serif;
 }
 
 .reward-main {
-  width: 700px;
+  width: 580px;
   margin: 0 auto
 }
 
@@ -49,6 +51,7 @@
 }
 
 .hash-above {
+  margin-top: 20px;
   margin-bottom: 12px;
   font-size: 18px;
   font-weight: lighter
