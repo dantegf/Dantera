@@ -1,6 +1,8 @@
 require 'securerandom'
 
 class ItemsController < ApplicationController
+  skip_before_action :authenticate_user!, only: [ :show, :mail, :new, :create ]
+
   def index
     @items = Item.all
   end
@@ -16,7 +18,6 @@ class ItemsController < ApplicationController
     redirect_to root_path, notice: "Thank you! The item owner will contact you shortly."
   end
 
-  skip_before_action :authenticate_user!, only: [ :show, :mail ]
   def show
     if params[:search]
       @item = Item.search(params[:search]).first
@@ -37,12 +38,18 @@ class ItemsController < ApplicationController
 
   def create
     @item = Item.new(item_params.merge(user: current_user))
-    generate_code(@item)
-    if @item.valid?
-      @item.save
-      redirect_to "/items", notice: 'Item successfully created'
+    if current_user
+      generate_code(@item)
+      if @item.valid?
+        @item.save
+        redirect_to "/items", notice: 'Item successfully created'
+      else
+        render :new
+      end
     else
-      render :new
+      cookies[:item] = {name: params[:item][:name], description: params[:item][:description], reward: params[:item][:reward],
+     contact: params[:item][:contact], photo: params[:item][:photo]}.to_json
+      redirect_to new_user_registration_path
     end
   end
 
