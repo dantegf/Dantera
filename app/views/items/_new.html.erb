@@ -2,7 +2,8 @@
 
     <h6>Item name</h6>
       <div><%= f.text_field :name, placeholder: "e.g. Leather Wallet", class: "modal-field" %></div>
-    <h6>Contact info</h6>
+    <h6>Email address</h6>
+
     <% if current_user %>
       <div><%= f.text_field :contact, value: current_user.email, class: "modal-field" %></div>
     <% else %>
