@@ -1,20 +1,20 @@
   <%= simple_form_for Item.new, url: {action: "create", controller: "items"}, html: {class: "add_item"} do |f| %>
 
     <h6>Item name</h6>
-      <div><%= f.text_field :name, placeholder: "ie: Leather wallet" %></div>
+      <div><%= f.text_field :name, placeholder: "e.g. Leather Wallet", class: "modal-field" %></div>
     <h6>Contact info</h6>
     <% if current_user %>
-      <div><%= f.text_field :contact, value: current_user.email %></div>
+      <div><%= f.text_field :contact, value: current_user.email, class: "modal-field" %></div>
     <% else %>
-      <div><%= f.text_field :contact %></div>
+      <div><%= f.text_field :contact, class: "modal-field" %></div>
     <% end %>
     <h6>Default reward</h6>
-      <%= f.text_field :reward, placeholder: "$ .00" %>
+      <%= f.text_field :reward, placeholder: "20", class: "modal-field" %>
     <h6>Description</h6>
-      <div><%= f.text_area :description, placeholder: "describe your item: color, size, function, serial #, etc..", size: "26x6" %></div>
-  <!-- Uploading Photo-->
+      <div><%= f.text_area :description, placeholder: "Describe your item: color, size, serial number, etc...", class: "modal-description", size: "26x6" %></div>
+  <!-- Uploading Photo -->
       <div><%= f.input :photo %></div>
         <%= f.input :photo_cache, as: :hidden %>
   <!-- Submit -->
-      <div><%= f.submit "Create New", method: "POST" %></div>
+      <div><%= f.submit "Create New", method: "POST", class: "search-btn" %></div>
     <% end %>

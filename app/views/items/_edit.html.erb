@@ -1,12 +1,15 @@
 <% if current_user %>
+
 <% @items_display = Item.where(user_id: current_user.id) %>
 <%= form_tag('/items/report_lost') do |f| %>
   <h6>Item:</h6>
-  <div><%= select_tag "id", options_from_collection_for_select(@items_display, "id", "name"), include_blank: false, label: false %></div>
+  <div><%= select_tag "id", options_from_collection_for_select(@items_display, "id", "name"), include_blank: false, class: "modal-field", label: false %></div>
 
   <h6>Set a $ Reward:</h6>
-  <div><%= text_field_tag "reward", nil, placeholder: "$ 20.00" %></div>
+  <div><%= text_field_tag "reward", nil, class: "modal-field", placeholder: "20" %></div>
   <!-- Submit -->
-  <div><%= submit_tag "Confirm", method: "POST" %></div>
+  <br>
+  <div><%= submit_tag "Confirm", method: "POST", class: "search-btn" %></div>
 <% end %>
+
 <% end %>
