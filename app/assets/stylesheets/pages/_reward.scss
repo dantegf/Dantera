@@ -1,14 +1,85 @@
+.success-main {
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 2px;
+  position: relative;
+  width: 230px;
+  height: 78px
+}
+
+.img-big {
+  width: 66px;
+  height: 66px
+}
+
+.green-tick {
+  position: absolute;
+  padding-top: 12px
+}
+
+.great {
+  position: absolute;
+  padding-right: 10px;
+  padding-left: 84px;
+}
+
+.great h1 {
+  font-size: 45px;
+  color: #39b048
+}
+
+.below-title {
+  margin: 0 auto;
+  width: 600px;
+  color: #333333;
+  padding-top: 10px;
+  margin-bottom: 22px;
+  font-size: 29px;
+  font-family: 'Abel', sans-serif;
+}
+
 .reward-main {
   width: 700px;
   margin: 0 auto
 }
 
+.reward-img img {
+  border-radius: 8px;
+  border: 1px solid #999999
+}
+
+.hash-above {
+  margin-bottom: 12px;
+  font-size: 18px;
+  font-weight: lighter
+}
+
+.code-above {
+  font-size: 26px;
+  font-family: 'Abel', sans-serif;
+  margin-bottom: 6px
+}
+
+.below-img {
+  margin-top: 14px
+}
+
 .reward-field {
-  width: 240px
+  width: 240px;
+  padding: 7px 14px;
+  border-radius: 3px;
+  border: 1px solid #999999
 }
 
 .reward-message {
-  padding: 6px;
+  padding: 7px 14px;
+  margin-bottom: 16px;
   height: 110px;
-  width: 240px
+  width: 240px;
+  border-radius: 3px;
+  border: 1px solid #999999
+}
+
+.header-p {
+  // text-align: left
 }

@@ -1,32 +1,41 @@
 <div class="container">
+  <div class="success-main">
+
+    <div class="green-tick"><img src="/assets/tick.png" class="img-big"></div>
+    <div class="great"><h1>Great!</h1></div>
+
+  </div>
+
+  <h1 class="below-title" align="center">Let the owner know you've found their <%= @item.name.downcase %>.<br> There might be a reward!</h1>
   <div class="row reward-main">
 
     <!-- Left -->
     <div class="col-xs-6 text-center">
-    <br>
-      <div class="code-big"><strong><%= "# " + @item.code %></strong></div>
-      <div class="item-name-big"><%= @item.name %></div>
+
+      <div class="hash-above"><em># <span class="code-above"><%= @item.code %></span></em></div>
+      <!-- <div class="item-name-big"><%#= @item.name %></div> -->
       <!-- <%#= "$ " + @item.reward.to_s  + ".00 " %> -->
-      <div class="card-img">
-              <%= cl_image_tag @item.photo, height: 100, width: 100, crop: :fill %>
+      <div class="reward-img">
+              <%= cl_image_tag @item.photo, height: 200, width: 200, crop: :fill %>
             </div>
-      <div><%= @item.description %></div>
+      <div class="below-img"><%= @item.description %></div>
+
     </div>
 
   <!-- Right -->
   <div class="col-xs-6 text-center">
-    <h3>Contact the Owner</h3>
+    <!-- <h2>Contact the Owner</h2> -->
       <div align="center">
       <%= form_tag( { controller: "items", action: "mail", method: "POST" }, {class: "add_item" } ) %>
       <%= hidden_field_tag(:item_id, @item.id) %>
-        <p>Email: </p>
+        <p class="header-p">Email: </p>
         <p><%= text_field_tag :email, nil, class: "reward-field" %></p>
-        <p>Phone (optional): </p>
+        <p class="header-p">Phone (optional): </p>
         <p><%= text_field_tag :phone_number, nil, class: "reward-field" %></p>
-        <p>Your message: </p>
+        <p class="header-p">Your message: </p>
         <%= text_area_tag(:message, "Hi, I've just found your #{@item.name.downcase}! Let me know how I can return it to you.", class: "reward-message") %>
-        <p><%= submit_tag("Send") %></p>
+        <p><%= submit_tag("Send", class: "search-btn") %></p>
       </div>
     </div>
   </div>
-</div>
+</div> <!-- Closes Container -->
