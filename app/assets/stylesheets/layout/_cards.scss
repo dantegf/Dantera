@@ -154,3 +154,27 @@
   position: relative;
   padding: 0
 }
+
+.modal-title {
+  padding: 8px 14px
+}
+
+.modal-body {
+  padding: 30px
+}
+
+.modal-field {
+  width: 240px;
+  padding: 7px 14px;
+  border-radius: 3px;
+  border: 1px solid #999999
+}
+
+.modal-description {
+  padding: 7px 14px;
+  margin-bottom: 16px;
+  height: 110px;
+  width: 240px;
+  border-radius: 3px;
+  border: 1px solid #999999
+}
