@@ -4,15 +4,15 @@
 
 .padded {
   padding: 10px;
-  height: 280px
+  height: 320px // Height of each card (100%)
 }
 
 .main-card {
-  display: flex;
+  position: relative;
   width: 100%;
   height: 100%;
   padding-top: 20px;
-  padding-left: 28px;
+  padding-left: 32px;
   padding-right: 0;
   box-shadow: 4px 4px 6px #dbdbdb;
   border-radius: 3px;
@@ -32,7 +32,7 @@
   font-weight: lighter
 }
 
-.code-big {
+#item-code {
   font-size: 30px;
   font-family: 'Abel', sans-serif;
   font-weight: bold;
@@ -47,17 +47,17 @@
   padding-left: 10px
 }
 
-.item_info {
-  //
+.item-info {
+  position: absolute;
+  padding-top: 130px
 }
 
 .reward {
-  padding-top: 7px;
+  padding-top: 160px;
   padding-bottom: 10px;
 }
 
 .delete-link a {
-  // padding-bottom: 30px;
   color: #ad2222;
   font-weight: bold;
   padding-left: 10px
@@ -85,14 +85,19 @@
 }
 
 .card-img {
+  position: absolute;
   background-color: white;
-  margin-top: 16px;
-  border-radius: 4px;
+  margin-top: 14px;
   width: 102px;
   height: 102px;
   border: 1px solid #bababa;
   padding: 0;
   box-shadow: inset 0 0 30px #f4f4f4;
+}
+
+.name-n-code {
+ position: absolute;
+ padding-left: 130px
 }
 
 .bottom-link {
@@ -120,6 +125,10 @@
   width: 0
 }
 
+.in-between-bottom {
+  width: 100px
+}
+
 .dash-link a {
   color: white;
   background-color: #309ce1;
@@ -136,4 +145,9 @@
   box-shadow: none;
   border: none;
   transition: 0.5s
+}
+
+.card-bottom {
+  position: absolute;
+  padding-top: 20px
 }
