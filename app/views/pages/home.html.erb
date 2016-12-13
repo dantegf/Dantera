@@ -16,11 +16,36 @@
   <br>
   <br>
   <br>
-    <!-- GIAC, THIS IS NOT WORKING YET, I'LL FIX IT TOMORROW :( -->
+
     <p>Using Dantera is free and easy, try it! :)</p>
-    <%= submit_tag "Register items", :name => nil, class: "search-btn" %>
+   <button type="button" class="btn-as-link" style="border: none; background: none; padding: 0" data-toggle="modal" data-target="#modalNew">Register items</button>
   </div>
 <!-- Closes Banner -->
+</div>
+
+<!-- Modal for register items  -->
+<div class="modal fade" id="modalNew" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <ul class="list-inline">
+        <li><h4 class="modal-title" id="myModalLabel">Create New</h4></li>
+        <!-- <li><h4> <%#= render "devise/shared/login" %></h4></li> -->
+        </ul>
+        <!-- <h6 class="modal-description">It's free and simple</h6> -->
+      </div>
+
+      <div class="modal-body">
+        <%= render "items/new" %>
+      </div>
+
+      <!-- <div class="modal-footer">
+        <button type="button" class="btn btn-primary">Sign Up</button>
+      </div> -->
+    </div>
+  </div>
 </div>
 
 <!-- Bootstrap Modal -->
