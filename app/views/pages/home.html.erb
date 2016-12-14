@@ -1,21 +1,22 @@
 <div class="banner" align="center">
+  <div class="banner-content">
 
-<h1 class="home-title" align="center">Find anything, anywhere</h1>
-<p class="home-p">Thanks to Dantera, returning items is now easy, simple and secure</p>
+    <h1 class="home-title" align="center">Find anything, anywhere</h1>
+    <p class="home-p">Thanks to Dantera, returning items is now easy, simple and secure</p>
 
-<div align="center">
-<!-- Search Form -->
-  <%= form_tag(items_show_path, :method => "get", id: "search-form") do %>
-    <%= text_field_tag :search, params[:search], placeholder: "Insert Item ID", class: "search-bar" %>
-    <%= submit_tag "Search", :name => nil, class: "search-btn" %>
-  <% end %>
-</div>
+    <div align="center">
+    <!-- Search Form -->
+      <%= form_tag(items_show_path, :method => "get", id: "search-form") do %>
+        <%= text_field_tag :search, params[:search], placeholder: "Insert Item ID", class: "search-bar" %>
+        <%= submit_tag "Search", :name => nil, class: "search-btn" %>
+      <% end %>
+    </div>
 
-<!-- Register new item button -->
-  <div>
-
-    <p class="easy-n-free">Our service is free. Try it out now!</p>
-   <button type="button" class="register-link" style="border: none; background: none; padding: 0; font-weight: bold" data-toggle="modal" data-target="#modalNew">Register an Item</button>
+    <!-- Register new item button -->
+    <div>
+      <p class="easy-n-free">Our service is free. Try it out now!</p>
+      <button type="button" class="register-link" style="border: none; background: none; padding: 0; font-weight: bold" data-toggle="modal" data-target="#modalNew">Register an Item</button>
+    </div>
   </div>
 
 <!-- Closes Banner -->
