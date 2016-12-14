@@ -4,6 +4,7 @@ class ItemsController < ApplicationController
   skip_before_action :authenticate_user!, only: [ :show, :mail, :new, :create ]
 
   def index
+    #comment
     @items = Item.where(user_id: current_user.id)
   end
 
