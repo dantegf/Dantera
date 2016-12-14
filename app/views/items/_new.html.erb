@@ -22,7 +22,8 @@
     <h6>Description</h6>
       <div><%= f.text_area :description, placeholder: "Describe your item: color, size, serial number, etc...", class: "modal-description", size: "26x6" %></div>
   <!-- Uploading Photo -->
-      <div><%= f.input :photo %></div>
+    <h6>Upload photo</h6>
+      <div><%= f.input :photo, label: false %></div>
         <%= f.input :photo_cache, as: :hidden %>
   <!-- Submit -->
       <div><%= f.submit "Create New", method: "POST", class: "search-btn", style: "width: 100%" %></div>
