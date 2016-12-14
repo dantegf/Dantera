@@ -3,13 +3,13 @@ Rails.application.routes.draw do
   resources :items do
     member do
       get "print", to: "items#print"
+      get "small_print", to: "items#small_print"
+      post "mail", to: "items#mail"
     end
   end
 
 
   root to: 'pages#home'
-
-  post '/items/:id/mail', to: 'items#mail'
 
   # get 'items/index'
 
@@ -43,5 +43,6 @@ Rails.application.routes.draw do
 
   get 'users/destroy'
 
+  get "/:search", to: "items#show"
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
