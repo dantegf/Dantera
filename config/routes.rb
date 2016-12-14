@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users, controllers: { registrations: 'our_devise/registrations' }
-  resources :items
+  resources :items do
+    member do
+      get "print", to: "items#print"
+    end
+  end
 
 
   root to: 'pages#home'
