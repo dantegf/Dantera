@@ -4,7 +4,6 @@ class ItemsController < ApplicationController
   skip_before_action :authenticate_user!, only: [ :show, :mail, :new, :create ]
 
   def index
-    #comment
     @items = Item.where(user_id: current_user.id)
   end
 
@@ -12,7 +11,7 @@ class ItemsController < ApplicationController
     @item = Item.find(params[:id])
     respond_to do |format|
       format.pdf do
-       render pdf:                            "Sticker for #{@item.name}"
+       render pdf: "Sticker for #{@item.name}"
       end
     end
   end

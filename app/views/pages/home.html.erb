@@ -29,14 +29,14 @@
 
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <ul class="list-inline">
-        <li><h4 class="modal-title" id="myModalLabel">Create New</h4></li>
-        <!-- <li><h4> <%#= render "devise/shared/login" %></h4></li> -->
-        </ul>
-        <!-- <h6 class="modal-description">It's free and simple</h6> -->
       </div>
 
       <div class="modal-body">
+        <div class="modal-banner text-center">
+          <%= image_tag "stamp.png", width: "70px" %>
+          <h3>Report an item</h3>
+        </div>
+
         <%= render "items/new" %>
       </div>
 
