@@ -4,11 +4,7 @@
 }
 
 .main-card {
-  position: relative;
   width: 100%;
-  height: 100%;
-  padding-top: 20px;
-  padding-left: 32px;
   padding-right: 0;
   box-shadow: 4px 4px 4px #dbdbdb;
   border-radius: 3px;
@@ -21,18 +17,40 @@
   margin-bottom: 30px;
   font-size: 40px;
   font-family: 'Abel', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .counter {
+    width: 40px;
+    height: 40px;
+    background: $green;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    margin-left: 10px;
+  }
 }
 
 #the-hash {
-  font-size: 18px;
   font-weight: lighter
 }
 
 #item-code {
-  font-size: 26px;
   font-family: 'Abel', sans-serif;
   // font-weight: bold;
   margin-bottom: 6px
+}
+
+.item-tag {
+  text-align: center;
+  font-weight: bold;
+  font-size: 33px;
+  margin-top: 30px;
+  background: #f1f1f1;
+  /* margin: 30px 50px; */
+  color: #5f5f5f;
 }
 
 .item-name {
@@ -45,19 +63,19 @@
 }
 
 .item-info {
-  position: absolute;
-  padding-top: 130px
 }
 
 .reward {
-  padding-top: 160px;
   padding-bottom: 10px;
+  position: absolute;
+  top: 30px;
+  right: 20px;
 }
 
 .delete-link a {
   color: #9e9e9e;
   // font-weight: bold;
-  padding-left: 10px
+  padding-left:º 10px
 }
 
 .delete-link a:hover {
@@ -82,19 +100,40 @@
 }
 
 .card-img {
-  position: absolute;
   background-color: white;
   margin-top: 14px;
-  width: 102px;
-  height: 102px;
   border: 1px solid #bababa;
   padding: 0;
-  box-shadow: inset 0 0 30px #f4f4f4;
+  box-shadow: inset 1 1 3px #f4f4f4;
+  background-size: cover;
+  background-position: center;
+  height: 150px;
+
 }
 
 .name-n-code {
- position: absolute;
- padding-left: 130px
+  position: relative;
+  padding: 20px;
+  h3 {
+    margin: 0;
+    font-weight: bold;
+    font-size: 30px;
+  }
+  .item-desc {
+    font-weight: lighter;
+    color: grey;
+  }
+}
+
+.card-footer  {
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  i {
+    padding-right: 5px;
+  }
 }
 
 .bottom-link {
