@@ -1,18 +1,31 @@
-<%= simple_form_for(User.new, as: :user, url: registration_path(:user)) do |f| %>
-  <%= f.error_notification %>
 
-  <div class="form-inputs">
-    <%= f.input :email, autofocus: true %>
-    <%= f.input :password, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length), placeholder: "At least 6 characters" %>
-    <%= f.input :password_confirmation %>
+<div class="container min-height">
+  <div class="row">
+    <div class="col-xs-12 col-sm-4 col-sm-offset-4">
+
+      <div class="login-card">
+        <h2 class="text-center">Sign up</h2>
+
+          <%= simple_form_for(User.new, as: :user, url: registration_path(:user)) do |f| %>
+            <%= f.error_notification %>
+
+            <div class="form-inputs">
+              <%= f.input :email, autofocus: true %>
+              <%= f.input :password, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length), placeholder: "At least 6 characters" %>
+              <%= f.input :password_confirmation %>
+            </div>
+
+            <div class="form-actions">
+              <%= f.button :submit, "Sign up", class: "search-btn", style: "width: 100%"%>
+            </div>
+          <% end %>
+
+          <div class="text-center">
+            <%= render "devise/shared/links" %>
+          </div>
+      </div>
+
+    </div>
   </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, "Sign Up", :class => 'btn-signup' %>
-  </div>
-<% end %>
-
-<div class="text-center">
-  <%= render "devise/shared/links" %>
 </div>
-<!-- form-actions -->
+
