@@ -1,12 +1,15 @@
 <div class="container">
   <div class="success-main">
-
     <div class="green-tick"><%= image_tag "tick.png", class: "img-big" %></div>
     <div class="great"><h1>Great!</h1></div>
-
   </div>
 
-  <h1 class="below-title" align="center">Tell the owner you've found their <%= @item.name.downcase %>.<br> There might be a reward!</h1>
+  <% if @item.reward > 0 %>
+    <h1 class="below-title" align="center">Tell the owner you found their <%= @item.name.downcase %>.<br> And collect a <%= "$ " + @item.reward.to_s + ".00" %> reward!</h1>
+  <% else %>
+    <h1 class="below-title" align="center">Thank you for doing the right thing, tell the owner you found their <%= @item.name.downcase %> :)</h1>
+  <% end %>
+
   <div class="row reward-main">
 
     <!-- Left -->
@@ -19,6 +22,7 @@
               <%= cl_image_tag @item.photo, height: 200, width: 200, crop: :fill %>
             </div>
       <div class="below-img"><%= @item.description %></div>
+      <%= @item.lost_message %>
 
     </div>
 
