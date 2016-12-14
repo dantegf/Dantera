@@ -81,7 +81,8 @@ class ItemsController < ApplicationController
 
   def report_lost
     @item = Item.find(params[:id])
-    @item.update_attributes(:reward => params[:reward])
+    @item.update_attributes(reward: params[:reward], lost_message: params[:lost_message])
+
     redirect_to '/items', :notice => "Well done, " + @item.name + " has been marked as lost."
   end
 
@@ -92,6 +93,6 @@ class ItemsController < ApplicationController
   end
 
   def item_params
-     params.require(:item).permit(:name, :code, :reward, :description, :photo, :photo_cache)
+     params.require(:item).permit(:name, :lost_message, :code, :reward, :description, :photo, :photo_cache)
   end
 end

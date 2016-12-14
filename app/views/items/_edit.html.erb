@@ -2,14 +2,24 @@
 
 <% @items_display = Item.where(user_id: current_user.id) %>
 <%= form_tag('/items/report_lost') do |f| %>
-  <h6>Item:</h6>
+
+  <!-- Pick your item -->
+  <h6>Select an item:</h6>
   <div><%= select_tag "id", options_from_collection_for_select(@items_display, "id", "name"), include_blank: false, class: "modal-field", label: false %></div>
 
-  <h6>Set a $ Reward:</h6>
+  <!-- Set a reward -->
+  <h6>Set a reward:</h6>
   <div><%= text_field_tag "reward", nil, class: "modal-field", placeholder: "20" %></div>
-  <!-- Submit -->
+
+  <!-- Default message to the finder -->
+  <h6>Set message</h6>
+  <div><%= text_area_tag :lost_message, nil, class: "modal-description", placeholder: "Write instructions to the person who finds your item, the person will be able to see what you type here", size: "26x6" %></div>
+
+  <!-- Submit button -->
   <br>
-  <div><%= submit_tag "Confirm", method: "POST", class: "search-btn" %></div>
+  <div><%= submit_tag "Submit", method: "POST", class: "search-btn", style: "width: 100%" %></div>
+  <br>
+
 <% end %>
 
 <% end %>
