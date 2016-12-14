@@ -1,10 +1,10 @@
-<div class="container min-height">
+<div class="container padded">
   <h2 align="center" class="my-items">My Items <span class="counter"><%= @items.count %></span></h2>
   <div class="row">
 
     <% @items.each do |item| %>
 
-      <div class="col-sm-4 padded">
+      <div class="col-sm-4">
         <div class="main-card"> <!-- White Background -->
 
             <div class="card-img" style="background-image: url('<%= cl_image_path item.photo, height: 300, width: 500, crop: :fill %>')">
