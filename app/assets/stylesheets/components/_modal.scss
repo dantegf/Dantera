@@ -20,3 +20,32 @@
   }
   padding-bottom: 20px;
 }
+
+.sticker-modal{
+  .search-btn {
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    margin-top: 50px;
+  }
+  img {
+    width: 100px;
+    margin-bottom: 30px;
+  }
+  p {
+    font-size: 16px;
+    font-weight: lighter;
+    color: grey;
+  }
+  .code {
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 40px;
+    color: black;
+  }
+
+  .sticker {
+    margin-top: 40px;
+    padding: 00px 40px;
+  }
+}

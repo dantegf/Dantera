@@ -1,10 +1,10 @@
-<div class="container min-height">
+<div class="container padded">
   <h2 align="center" class="my-items">My Items <span class="counter"><%= @items.count %></span></h2>
   <div class="row">
 
     <% @items.each do |item| %>
 
-      <div class="col-sm-4 padded">
+      <div class="col-sm-4">
         <div class="main-card"> <!-- White Background -->
 
             <div class="card-img" style="background-image: url('<%= cl_image_path item.photo, height: 300, width: 500, crop: :fill %>')">
@@ -20,7 +20,7 @@
             </div>
 
             <div class="card-footer">
-              <div class="print-code-link"><a href="/users/new">Print Code</a></div>
+              <div class="print-code-link"><a href="#" data-toggle="modal" data-target="#sticker-<%= item.id %>">Print Code</a></div>
               <div class="delete-link"><i class="fa fa-trash" aria-hidden="true"></i><%= link_to "Remove", item_path(item),
         method: :delete,
         data: { confirm: "Are you sure?" } %></div>
@@ -28,6 +28,8 @@
 
 
       </div> <!-- Closes main-card -->
+
+
     </div>
     <% end %>
     </div>
@@ -43,6 +45,40 @@
   </ul>
 </div>
 -->
+
+
+
+<% @items.each do |item| %>
+  <!-- Modal -->
+  <div class="modal fade" id="sticker-<%= item.id %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title text-center" id="myModalLabel">Print your sticker</h4>
+        </div>
+        <div class="modal-body sticker-modal">
+
+          <div class="sticker text-center">
+            <%= image_tag  "d-logo-dark.png" %>
+            <p>
+              You found a lost item!  Doing the right thing is easy and simple</p>
+            <p>
+              Please go to <strong>dantera.org</strong> and insert the code below to return the item to the owner
+            </p>
+            <p class="code"><%= item.code  %></p>
+          </div>
+
+
+          <%= link_to "Print sticker PDF", print_item_path(item, format: :pdf), class: "search-btn", width: '100%'  %>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+<% end %>
 
 <!-- Bootstrap Modal -->
 <div class="modal fade" id="modalNew" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
