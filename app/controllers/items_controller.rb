@@ -16,6 +16,15 @@ class ItemsController < ApplicationController
     end
   end
 
+    def small_print
+    @item = Item.find(params[:id])
+    respond_to do |format|
+      format.pdf do
+       render pdf: "Sticker for #{@item.name}"
+      end
+    end
+  end
+
   def mail
     item = Item.find(params[:item_id])
     user = User.first

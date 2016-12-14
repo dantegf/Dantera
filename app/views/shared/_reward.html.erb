@@ -30,7 +30,7 @@
   <div class="col-xs-6 text-center">
     <!-- <h2>Contact the Owner</h2> -->
       <div align="center">
-      <%= form_tag( { controller: "items", action: "mail", method: "POST" }, {class: "add_item" } ) %>
+      <%= form_tag( mail_item_path(@item), {class: "add_item" } ) %>
       <%= hidden_field_tag(:item_id, @item.id) %>
         <p class="header-p">Email: </p>
         <p><%= text_field_tag :email, nil, class: "reward-field" %></p>
