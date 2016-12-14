@@ -7,18 +7,20 @@
   // background-size: cover !important;
   // display: flex;
   text-align: center;
-  background-image: url("bright.jpg");
+  background-image: linear-gradient(-225deg, rgba(255,255,255,0.9) 30%, rgba(255,255,255,0.9) 80%), image-url("home-bg.jpg");
   background-repeat:no-repeat;
   background-position: center center;
-  height: 550px;
+  background-size: cover;
+  height: calc(100vh - 70px);
   // width: 400px;
-  margin: 0 auto
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
 }
 
 .home-title {
   color: #212121;
-  padding-top: 140px;
-  margin-bottom: 10px;
   font-size: 45px;
   font-family: 'Abel', sans-serif;
   // font-weight: bold;
@@ -62,7 +64,7 @@
 }
 
 .easy-n-free {
-  margin-top: 160px
+  margin-top: 90px
 }
 
 .register-link {
@@ -74,3 +76,21 @@
 .register-link:hover {
   font-size: 20.5px
 }
+
+
+.login-card{
+  margin-top: 100px;
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+  h2 {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+}
+
+
+
+
