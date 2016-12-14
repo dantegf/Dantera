@@ -7,15 +7,15 @@
     <div align="center">
     <!-- Search Form -->
       <%= form_tag(items_show_path, :method => "get", id: "search-form") do %>
-        <%= text_field_tag :search, params[:search], placeholder: "Insert Item ID", class: "search-bar" %>
+        <%= text_field_tag :search, params[:search], placeholder: "Got a code?", class: "search-bar" %>
         <%= submit_tag "Search", :name => nil, class: "search-btn" %>
       <% end %>
     </div>
 
     <!-- Register new item button -->
-    <div>
-      <p class="easy-n-free">Our service is free. Try it out now!</p>
-      <button type="button" class="register-link" style="border: none; background: none; padding: 0; font-weight: bold" data-toggle="modal" data-target="#modalNew">Register an Item</button>
+    <div class="block" >
+      <p class="easy-n-free">
+      <button type="button" class="register-link" style="border: none; background: none; padding: 0; font-weight: bold" data-toggle="modal" data-target="#modalNew">Our service is free &nbsp;<span class="text-bold">Try it out now</span></button></p>
     </div>
   </div>
 

@@ -4,7 +4,7 @@
     <div class="great"><h1>Great!</h1></div>
   </div>
 
-  <% if @item.reward > 0 %>
+  <% if @item.reward.to_i > 0 %>
     <h1 class="below-title" align="center">Tell the owner you found their <%= @item.name.downcase %>.<br> And collect a <%= "$ " + @item.reward.to_s + ".00" %> reward!</h1>
   <% else %>
     <h1 class="below-title" align="center">Thank you for doing the right thing, tell the owner you found their <%= @item.name.downcase %> :)</h1>

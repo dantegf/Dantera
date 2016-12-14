@@ -28,6 +28,9 @@ class ItemsController < ApplicationController
   end
 
   def show
+    if params[:search] == ""
+      redirect_to root_path, notice: 'Sorry, please insert a code. Try again.'
+    end
     if params[:search]
       @item = Item.search(params[:search]).first
     end

@@ -7,12 +7,11 @@
   // background-size: cover !important;
   // display: flex;
   text-align: center;
-  background-image: linear-gradient(-225deg, rgba(255,255,255,0.8) 30%, rgba(255,255,255,0.9) 80%), image-url("home-bg.jpg");
+  background-image: linear-gradient(-225deg, rgba(48, 156, 225, 0.15) 15%, rgba(48, 156, 225, 0.15) 15%), image-url("home-bg.jpg");
   background-repeat:no-repeat;
   background-position: center center;
   background-size: cover;
   height: calc(100vh - 70px);
-  // width: 400px;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -20,17 +19,19 @@
 }
 
 .home-title {
-  color: #212121;
-  font-size: 45px;
-  font-family: 'Abel', sans-serif;
-  // font-weight: bold;
-  text-shadow: 0 0 10px #ffffff
+    color: white;
+    font-size: 75px;
+    font-family: 'Abel', sans-serif;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
 .home-p {
-  color: #2d2d2d;
-  text-shadow: 0 0 10px #ffffff;
-  margin-bottom: 28px
+    color: white;
+    margin-bottom: 28px;
+    font-style: bold !important;
+    font-size: 20px;
+    text-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
 .search-bar {
@@ -67,16 +68,25 @@
   margin-top: 90px
 }
 
+.block{
+  height: 20px;
+}
+
+.text-bold{
+font-weight: bold;
+font-size: 23px;
+}
+
 .register-link {
-  font-size: 20px;
+  font-size: 21.5px;
   font-family: 'Abel', sans-serif;
-  transition: 0.4s
+  transition: 0.2s;
+  color: white !important;
 }
 
 .register-link:hover {
-  font-size: 20.5px
+  font-size: 23px;
 }
-
 
 .login-card{
   margin-top: 100px;
