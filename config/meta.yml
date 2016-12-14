@@ -1,0 +1,5 @@
+# config/meta.yml
+meta_title: "Dantera"
+meta_description: "Manage anything, anywhere"
+meta_image: "/assets/d-logo-dark.png" # Une image dans votre dossier app/assets/images/
+twitter_account: "@dantera" # indispensable pour les Twitter Cards
