@@ -95,6 +95,24 @@
   border: 1px solid #999999
 }
 
+.reward-btn {
+  color: white;
+  background-color: #309ce1;
+  box-shadow: inset 0 0 16px #2c94d6;
+  border: none;
+  border-radius: 3px;
+  padding: 10px 20px;
+  transition: 0.4s;
+  width: 93% !important;
+}
+
+.reward-btn a:hover {
+  background-color: #247eb7;
+  box-shadow: none;
+  border: none;
+  transition: 0.4s
+}
+
 .header-p {
   // text-align: left
 }
