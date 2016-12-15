@@ -78,6 +78,7 @@ font-size: 23px;
 }
 
 .register-link {
+  font-weight: lighter !important;
   font-size: 21.5px;
   font-family: 'Abel', sans-serif;
   transition: 0.2s;
@@ -85,7 +86,7 @@ font-size: 23px;
 }
 
 .register-link:hover {
-  font-size: 27px;
+  font-size: 23px;
 }
 
 .login-card{
@@ -102,17 +103,18 @@ font-size: 23px;
 }
 
 .edit-btn {
-  background-color: #d6d6d6;
+  background-color: #e0e0e0;
   border-radius: 50%;
   transition: 0.4s;
   text-align: center;
   font-size: 16px;
   display: flex;
-  box-shadow: 0 0 6px rgba(0,0,0,0.2);
+  box-shadow: -1px 1px 4px rgba(0,0,0,0.3);
   justify-content: space-around;
   align-items: center;
-  width: 39px;
-  height: 39px;
+  width: 40px;
+  height: 40px;
+  // border: 1px solid #a0a0a0;
   position: absolute;
   top: 13px;
   right: 13px;
