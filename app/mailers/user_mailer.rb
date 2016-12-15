@@ -4,6 +4,7 @@ class UserMailer < ApplicationMailer
     @message = message
     @email = email
     mail(
+      from:     'Dantera.org',
       to:       email,
       subject:  "Thanks for helping :)"
     )
