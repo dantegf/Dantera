@@ -6,12 +6,14 @@
 
       <div class="col-sm-4">
         <div class="main-card"> <!-- White Background -->
-            <% if  item.photo.present? %>
-              <div class="card-img" style="background-image: url('<%= cl_image_path item.photo, height: 300, width: 500, crop: :fill %>')">
-              </div>
-              <% else %>
-              <div class="card-img" style="background-image: url('<%= image_path "question.jpg", height: 300, width: 500, crop: :fill %>')">
-              </div>
+            <%= link_to edit_item_path(item) do %>
+              <% if  item.photo.present? %>
+                <div class="card-img" style="background-image: url('<%= cl_image_path item.photo, height: 300, width: 500, crop: :fill %>')">
+                </div>
+                <% else %>
+                <div class="card-img" style="background-image: url('<%= image_path "question.jpg", height: 300, width: 500, crop: :fill %>')">
+                </div>
+              <% end %>
             <% end %>
 
             <div class="name-n-code">
