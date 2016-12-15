@@ -102,32 +102,23 @@ font-size: 23px;
 }
 
 .edit-btn {
-  // color: black;
-  // background-color: white;
-  // box-shadow: inset 0 0 16px #2c94d6;
-  // border: 1px solid black;
-  border-color: black;
-  border-radius: 40px;
-  padding: 2px 2px;
-  transition: 0.3s;
-  width: 30%;
+  background-color: #d6d6d6;
+  border-radius: 50%;
+  transition: 0.4s;
   text-align: center;
   font-size: 16px;
   display: flex;
+  box-shadow: 0 0 6px rgba(0,0,0,0.2);
   justify-content: space-around;
   align-items: center;
-  width: 40px;
-  height: 40px;
+  width: 39px;
+  height: 39px;
   position: absolute;
-  top: 3px;
-  right: 3px;
+  top: 13px;
+  right: 13px;
 
 }
 .edit-btn:hover{
-background-color: black;
-border: 1px solid white;
+  background-color: #cccccc;
+  transition: 0.4s;
 }
-
-
-
-

@@ -9,7 +9,7 @@
             <%= link_to edit_item_path(item) do %>
               <% if  item.photo.present? %>
                 <div class="card-img" style="background-image: url('<%= cl_image_path item.photo, height: 300, width: 500, crop: :fill %>')">
-                  <p class="edit-btn" ><img style="height: 22px;" <%= image_tag "pencil.png" %></p>
+                  <div class="edit-btn" ><img style="height: 22px; " <%= image_tag "pencil.png" %></div>
 
                 </div>
                 <% else %>
