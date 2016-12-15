@@ -31,9 +31,8 @@ class ItemsController < ApplicationController
     message = params[:message]
     phone_number = params[:phone_number]
     email = params[:email]
-    photo = params[:photo] #<<<<<< here photo params
-    UserMailer.email_to_finder(item, message, email, photo).deliver_now
-    UserMailer.email_to_owner(item, message, phone_number, email, photo).deliver_now
+    UserMailer.email_to_finder(item, message, email).deliver_now
+    UserMailer.email_to_owner(item, message, phone_number, email).deliver_now
     redirect_to root_path, notice: "Thank you! The item owner will contact you shortly."
   end
 
@@ -65,7 +64,8 @@ class ItemsController < ApplicationController
       end
     else
       cookies[:item] = {name: params[:item][:name], description: params[:item][:description], reward: params[:item][:reward],
-     contact: params[:item][:contact], photo: params[:item][:photo]}.to_json
+     contact: params[:item][:contact]}.to_json
+     cookies[:email] = params[:item][:contact]
       redirect_to new_user_registration_path
     end
   end
