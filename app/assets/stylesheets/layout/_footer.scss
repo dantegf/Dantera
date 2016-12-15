@@ -1,5 +1,10 @@
+.min-height {
+  min-height: calc(100vh - 173px) !important;
+}
+
 .footer {
   background-color: #363636;
+  height: 97px
 }
 
 .dantera {
