@@ -78,11 +78,19 @@ class ItemsController < ApplicationController
 
   def update
     @item = Item.find(params[:id])
-    if @item.update_attributes(params[:name])
-     redirect_to :action => 'show', :id => @item
+    if item_params[:photo]
+      @item.photo = item_params[:photo]
+      @item.save
+      redirect_to "/items", notice: 'Photo changed successfully'
+
     else
-     @item = item.find(:all)
-     render :action => 'edit'
+
+      if @item.update_attributes(params[:name])
+       redirect_to :action => 'show', :id => @item
+      else
+       @item = item.find(:all)
+       render :action => 'edit'
+      end
     end
 
   end

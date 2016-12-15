@@ -1,0 +1,16 @@
+<div class="container padded">
+  <div class="row">
+    <%= simple_form_for @item do |f| %>
+
+     <h3>Upload photo</h3>
+      <div><%= f.input :photo, label: false %></div>
+      <%= f.input :photo_cache, as: :hidden %>
+
+      <!-- Submit button -->
+      <br>
+      <div><%= submit_tag "Submit", method: "POST", class: "search-btn", style: "width: 100%" %></div>
+      <br>
+
+    <% end %>
+  </div>
+</div>
