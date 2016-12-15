@@ -1,9 +1,8 @@
 class UserMailer < ApplicationMailer
   def email_to_finder(item, message, email)
-
     mail(
       to:       email,
-      subject:  "Thanks for helping! :)"
+      subject:  "Thanks for helping :)"
     )
   end
 
@@ -14,7 +13,7 @@ class UserMailer < ApplicationMailer
     @email = email
     mail(
       to:       item.user.email,
-      subject:  "Your #{item.name} was found! :D"
+      subject:  "Your #{item.name} was found :D"
     )
   end
 end

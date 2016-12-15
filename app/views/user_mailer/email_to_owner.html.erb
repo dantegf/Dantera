@@ -487,7 +487,7 @@ body{background-color:#F9F9F9}.mso h1{}.mso h2{}.mso h3{}.mso .column,.mso .colu
       </div>
       <div class="header" style="Margin: 0 auto;max-width: 600px;min-width: 320px; width: 320px;width: calc(28000% - 167400px);" id="emb-email-header-container">
       <!--[if (mso)|(IE)]><table align="center" class="header" cellpadding="0" cellspacing="0" role="presentation"><tr><td style="width: 600px"><![endif]-->
-        <div class="logo emb-logo-margin-box" style="font-size: 26px;line-height: 32px;Margin-top: 6px;Margin-bottom: 20px;color: #c3ced9;font-family: Roboto,Tahoma,sans-serif;Margin-left: 20px;Margin-right: 20px;" align="center">
+        <div class="logo emb-logo-margin-box" style="font-size: 26px;line-height: 32px;Margin-top: 6px;Margin-bottom: 14px;color: #c3ced9;font-family: Roboto,Tahoma,sans-serif;Margin-left: 20px;Margin-right: 20px;" align="center">
           <div class="logo-center" align="center" id="emb-email-header"><img style="display: block;height: auto;width: 100%;border: 0;max-width: 141px;" src= "<%= image_url('d-logo-dark.png') %>" alt="" width="141" /></div>
         </div>
       <!--[if (mso)|(IE)]></td></tr></table><![endif]-->
@@ -501,8 +501,9 @@ body{background-color:#F9F9F9}.mso h1{}.mso h2{}.mso h3{}.mso .column,.mso .colu
       <div style="line-height:20px;font-size:1px">&nbsp;</div>
     </div>
 
-            <div style="Margin-left: 20px;Margin-right: 20px;">
-      <h1 style="Margin-top: 0;Margin-bottom: 0;font-style: normal;font-weight: normal;color: #000;font-size: 34px;line-height: 43px;text-align: center;">Your <%= "#{@item.name}"  %>  was found! :)&nbsp;</h1><h1 style="Margin-top: 20px;Margin-bottom: 0;font-style: normal;font-weight: normal;color: #000;font-size: 34px;line-height: 43px;text-align: center;">Hurry up, get in touch!</h1><p style="Margin-top: 20px;Margin-bottom: 0;">NON USER MESSAGE:</p><p style="Margin-top: 20px;Margin-bottom: 0;">NON USER EMAIL:</p><p style="Margin-top: 20px;Margin-bottom: 20px;">NON USER PHONE:</p>
+      <div style="Margin-left: 20px;Margin-right: 20px;">
+      <h2 style="Margin-top: 0px;Margin-bottom: 10px;font-style: normal;font-weight: normal;color: #000;font-size: 27px;line-height: 43px;text-align: center;">Your <%= "#{@item.name}"  %>  was found :D&nbsp;</h2><p style="Margin-top: 20px;Margin-bottom: 0;"></p><p>Message from: <%= "#{@email}"  %> <br></p> <p style="margin-top: 2px;margin-bottom: 0px;"> <span style="font-size: 18px" > <%= "#{@message}"%></span></p>
+<h2 style="Margin-top: 20px;Margin-bottom: 0;font-style: normal;font-weight: normal;color: #000;font-size: 25px;line-height: 43px;text-align: center;">Hurry up, get in touch</h2><p>Call them at: <%= "#{@phone_number}" %></p>
     </div>
 
             <div style="Margin-left: 20px;Margin-right: 20px;">
@@ -526,7 +527,7 @@ body{background-color:#F9F9F9}.mso h1{}.mso h2{}.mso h3{}.mso .column,.mso .colu
 
               <div style="Margin-left: 20px;Margin-right: 20px;Margin-top: 24px;Margin-bottom: 24px;">
       <div class="btn btn--flat fullwidth btn--large" style="text-align: center;">
-        <![if !mso]><a style="border-radius: 0;display: block;font-size: 14px;font-weight: bold;line-height: 24px;padding: 12px 24px;text-align: center;text-decoration: none !important;transition: opacity 0.1s ease-in;color: #fff;background-color: #000;font-family: Avenir, sans-serif;" href="http://dantera.herokuapp.com">DANTERA.ORG</a><![endif]>
+        <![if !mso]><a style="border-radius: 0;display: block;font-size: 14px;font-weight: bold;line-height: 24px;padding: 12px 24px;text-align: center;text-decoration: none !important;transition: opacity 0.1s ease-in;color: #fff;background-color: #000;font-family: Avenir, sans-serif;" href="http://www.dantera.org">DANTERA.ORG</a><![endif]>
       <!--[if mso]><p style="line-height:0;margin:0;">&nbsp;</p><v:rect xmlns:v="urn:schemas-microsoft-com:vml" href="http://dantera.herokuapp.com" style="width:260px" fillcolor="#000000" stroke="f"><v:textbox style="mso-fit-shape-to-text:t" inset="0px,12px,0px,12px"><center style="font-size:14px;line-height:24px;color:#FFFFFF;font-family:sans-serif;font-weight:bold;mso-line-height-rule:exactly;mso-text-raise:4px">DANTERA.ORG</center></v:textbox></v:rect><![endif]--></div>
     </div>
 
@@ -536,74 +537,11 @@ body{background-color:#F9F9F9}.mso h1{}.mso h2{}.mso h3{}.mso .column,.mso .colu
 
               <div style="Margin-left: 20px;Margin-right: 20px;Margin-top: 24px;Margin-bottom: 24px;">
       <div class="btn fullwidth btn--ghost btn--large" style="text-align: center;">
-        <![if !mso]><a style="border-radius: 0;display: block;font-size: 14px;font-weight: bold;line-height: 24px;padding: 12px 24px;text-align: center;text-decoration: none !important;transition: opacity 0.1s ease-in;color: #000000 !important;border: 1px solid #000;font-family: Avenir, sans-serif;" href="http://dantera.herokuapp.com/users/sign_in">SIGN IN</a><![endif]>
+        <![if !mso]><a style="border-radius: 0;display: block;font-size: 14px;font-weight: bold;line-height: 24px;padding: 12px 24px;text-align: center;text-decoration: none !important;transition: opacity 0.1s ease-in;color: #000000 !important;border: 1px solid #000;font-family: Avenir, sans-serif;" href="http://dantera.herokuapp.com/users/sign_in">REPLY MESSAGE</a><![endif]>
       <!--[if mso]><p style="line-height:0;margin:0;">&nbsp;</p><v:rect xmlns:v="urn:schemas-microsoft-com:vml" href="http://dantera.herokuapp.com/users/sign_in" style="width:258px" filled="f" strokecolor="#000000" strokeweight="1px"><v:textbox style="mso-fit-shape-to-text:t" inset="0px,12px,0px,12px"><center style="font-size:14px;line-height:24px;color:#000000;font-family:sans-serif;font-weight:bold;mso-line-height-rule:exactly;mso-text-raise:4px">SIGN IN</center></v:textbox></v:rect><![endif]--></div>
     </div>
 
-            </div>
-          <!--[if (mso)|(IE)]></td><td class="layout__edges">&nbsp;</td></tr></table><![endif]-->
-          </div>
-        </div>
-      </div>
 
-      <div style="line-height:20px;font-size:20px;">&nbsp;</div>
-
-      <div class="layout one-col fixed-width" style="Margin: 0 auto;max-width: 600px;min-width: 320px; width: 320px;width: calc(28000% - 167400px);overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;">
-        <div class="layout__inner" style="border-collapse: collapse;display: table;width: 100%;background-color: #ffffff;">
-        <!--[if (mso)|(IE)]><table align="center" cellpadding="0" cellspacing="0" role="presentation"><tr class="layout-fixed-width" style="background-color: #ffffff;"><td style="width: 600px" class="w560"><![endif]-->
-          <div class="column" style="text-align: left;color: #000;font-size: 14px;line-height: 21px;font-family: Avenir,sans-serif;max-width: 600px;min-width: 320px; width: 320px;width: calc(28000% - 167400px);">
-
-        <div style="font-size: 12px;font-style: normal;font-weight: normal;" align="center">
-          <img class="gnd-corner-image gnd-corner-image-center gnd-corner-image-top gnd-corner-image-bottom" style="border: 0;display: block;height: auto;width: 100%;max-width: 900px;" alt="How you can help - kids reading at school" width="600" src= "<%= image_url('hand-top-1copy1.jpg') %>" />
-        </div>
-
-          </div>
-        <!--[if (mso)|(IE)]></td></tr></table><![endif]-->
-        </div>
-      </div>
-
-      <div>
-        <div class="layout email-footer" style="Margin: 0 auto;max-width: 600px;min-width: 320px; width: 320px;width: calc(28000% - 167400px);overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;">
-          <div class="layout__inner" style="border-collapse: collapse;display: table;width: 100%;">
-          <!--[if (mso)|(IE)]><table align="center" cellpadding="0" cellspacing="0" role="presentation"><tr class="layout-email-footer"><td style="width: 400px;" valign="top" class="w360"><![endif]-->
-            <div class="column wide" style="text-align: left;font-size: 12px;line-height: 19px;color: #000;font-family: Avenir,sans-serif;Float: left;max-width: 400px;min-width: 320px; width: 320px;width: calc(8000% - 47600px);">
-              <div style="Margin-left: 20px;Margin-right: 20px;Margin-top: 10px;Margin-bottom: 10px;">
-
-                <div>
-
-                </div>
-                <div style="Margin-top: 18px;">
-
-                </div>
-              </div>
-            </div>
-          <!--[if (mso)|(IE)]></td><td style="width: 200px;" valign="top" class="w160"><![endif]-->
-            <div class="column narrow" style="text-align: left;font-size: 12px;line-height: 19px;color: #000;font-family: Avenir,sans-serif;Float: left;max-width: 320px;min-width: 200px; width: 320px;width: calc(72200px - 12000%);">
-              <div style="Margin-left: 20px;Margin-right: 20px;Margin-top: 10px;Margin-bottom: 10px;">
-
-              </div>
-            </div>
-          <!--[if (mso)|(IE)]></td></tr></table><![endif]-->
-          </div>
-        </div>
-        <div class="layout one-col email-footer" style="Margin: 0 auto;max-width: 600px;min-width: 320px; width: 320px;width: calc(28000% - 167400px);overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;">
-          <div class="layout__inner" style="border-collapse: collapse;display: table;width: 100%;">
-          <!--[if (mso)|(IE)]><table align="center" cellpadding="0" cellspacing="0" role="presentation"><tr class="layout-email-footer"><td style="width: 600px;" class="w560"><![endif]-->
-            <div class="column" style="text-align: left;font-size: 12px;line-height: 19px;color: #000;font-family: Avenir,sans-serif;max-width: 600px;min-width: 320px; width: 320px;width: calc(28000% - 167400px);">
-              <div style="Margin-left: 20px;Margin-right: 20px;Margin-top: 10px;Margin-bottom: 10px;">
-                <div>
-                <br>
-                <br>
-                <br>
-                  <unsubscribe style="text-decoration: underline;">Unsubscribe</unsubscribe>
-                </div>
-              </div>
-            </div>
-          <!--[if (mso)|(IE)]></td></tr></table><![endif]-->
-          </div>
-        </div>
-      </div>
-      <div style="line-height:40px;font-size:40px;">&nbsp;</div>
     </td></tr></tbody></table>
 
 </body></html>
