@@ -9,6 +9,12 @@
   box-shadow: 4px 4px 4px #dbdbdb;
   border-radius: 3px;
   background-color: white;
+  transition: 0.4s;
+}
+
+.main-card:hover {
+  box-shadow: 4px 4px 4px #adadad;
+  transition: 0.4s;
 }
 
 .my-items {
