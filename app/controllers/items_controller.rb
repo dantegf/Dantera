@@ -82,11 +82,9 @@ class ItemsController < ApplicationController
       @item.photo = item_params[:photo]
       @item.save
       redirect_to "/items", notice: 'Photo changed successfully'
-
     else
-
-      if @item.update_attributes(params[:name])
-       redirect_to :action => 'show', :id => @item
+      if item_params[:photo].nil?
+      redirect_to edit_item_path, notice: 'You have to upload an image'
       else
        @item = item.find(:all)
        render :action => 'edit'
