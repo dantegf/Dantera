@@ -70,10 +70,14 @@
             <p class="code"><%= item.code  %></p>
           </div>
 
-
-          <%= link_to "Print sticker PDF", print_item_path(item, format: :pdf), class: "search-btn", width: '100%'  %>
-          <%= link_to "or get the small sticker", small_print_item_path(item, format: :pdf)  %>
-
+        <div class="row">
+        <div class="col-xs-6 link-white" >
+          <%= link_to "Print big sticker", print_item_path(item, format: :pdf), class: "search-btn", width: '50%'  %>
+          </div>
+          <div class="col-xs-6">
+          <%= link_to "Print small sticker", small_print_item_path(item, format: :pdf), class: "search-btn", width: '50%' %>
+        </div>
+        </div>
 
         </div>
       </div>
