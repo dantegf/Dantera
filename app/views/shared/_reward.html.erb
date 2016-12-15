@@ -1,4 +1,7 @@
-<div class="container">
+<div class="container" align="center">
+
+  <div class="reward-wrapper">
+
   <div class="success-main">
     <div class="green-tick"><%= image_tag "tick.png", class: "img-big" %></div>
     <div class="great"><h1>Great!</h1></div>
@@ -19,9 +22,10 @@
       <!-- <div class="item-name-big"><%#= @item.name %></div> -->
       <!-- <%#= "$ " + @item.reward.to_s  + ".00 " %> -->
       <div class="reward-img">
-              <%= cl_image_tag @item.photo, height: 200, width: 200, crop: :fill %>
+              <%= cl_image_tag @item.photo, height: 150, width: 200, crop: :fill %>
             </div>
       <div class="below-img"><%= @item.description %></div>
+      <p style="color: #b2b2b2; margin-bottom: 12px; margin-top: -4px">______________</p>
       <%= @item.lost_message %>
 
     </div>
@@ -41,5 +45,7 @@
         <p><%= submit_tag("Send", class: "search-btn") %></p>
       </div>
     </div>
+  </div>
+
   </div>
 </div> <!-- Closes Container -->

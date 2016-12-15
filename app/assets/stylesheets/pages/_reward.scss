@@ -1,3 +1,15 @@
+.reward-wrapper {
+  background-color: white;
+  margin-top: 26px;
+  padding-top: 8px;
+  padding-right: 8px;
+  padding-bottom: 26px;
+  margin-bottom: 30px;
+  width: 590px;
+  border-radius: 6px;
+  box-shadow: 4px 4px 8px rgba(0,0,0,0.2)
+}
+
 .success-main {
   margin: 0 auto;
   margin-top: 20px;
@@ -51,20 +63,20 @@
 }
 
 .hash-above {
-  margin-top: 20px;
-  margin-bottom: 12px;
+  margin-top: -11px;
+  margin-bottom: 10px;
   font-size: 18px;
   font-weight: lighter
 }
 
 .code-above {
-  font-size: 26px;
+  font-size: 24px;
   font-family: 'Abel', sans-serif;
   margin-bottom: 6px
 }
 
 .below-img {
-  margin-top: 14px
+  margin-top: 12px
 }
 
 .reward-field {
