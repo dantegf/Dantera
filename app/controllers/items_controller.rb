@@ -31,8 +31,9 @@ class ItemsController < ApplicationController
     message = params[:message]
     phone_number = params[:phone_number]
     email = params[:email]
-    UserMailer.email_to_finder(item, message, email).deliver_now
-    UserMailer.email_to_owner(item, message, phone_number, email).deliver_now
+    photo = params[:photo] #<<<<<< here photo params
+    UserMailer.email_to_finder(item, message, email, photo).deliver_now
+    UserMailer.email_to_owner(item, message, phone_number, email, photo).deliver_now
     redirect_to root_path, notice: "Thank you! The item owner will contact you shortly."
   end
 
