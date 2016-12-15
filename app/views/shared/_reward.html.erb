@@ -43,7 +43,7 @@
         <p><%= text_field_tag :phone_number, nil, class: "reward-field" %></p>
         <p class="header-p">Your message: </p>
         <%= text_area_tag(:message, "Hi, I've just found your #{@item.name.downcase}! Let me know how I can return it to you.", class: "reward-message") %>
-        <p><%= submit_tag("Send", class: "search-btn") %></p>
+        <p><%= submit_tag("Send", class: "reward-btn") %></p>
       </div>
     </div>
   </div>
