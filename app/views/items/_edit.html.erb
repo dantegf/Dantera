@@ -4,11 +4,11 @@
 <%= form_tag('/items/report_lost') do |f| %>
 
   <!-- Pick your item -->
-  <h6>Select an item:</h6>
+  <h6>Select an item</h6>
   <div><%= select_tag "id", options_from_collection_for_select(@items_display, "id", "name"), include_blank: false, class: "modal-field", label: false %></div>
 
   <!-- Set a reward -->
-  <h6>Set a reward:</h6>
+  <h6>Set a reward</h6>
   <div><%= text_field_tag "reward", nil, class: "modal-field", placeholder: "20" %></div>
 
   <!-- Default message to the finder -->
