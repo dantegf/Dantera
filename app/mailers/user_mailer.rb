@@ -1,8 +1,7 @@
 class UserMailer < ApplicationMailer
-  def email_to_finder(item, message, email, photo) #<<<<<< here photo params
+  def email_to_finder(item, message, email)
     @item = item
     @message = message
-    @photo = photo #<<<<<< here photo params
     @email = email
     mail(
       to:       email,
@@ -10,12 +9,11 @@ class UserMailer < ApplicationMailer
     )
   end
 
-  def email_to_owner(item, message, phone_number, email, photo)
+  def email_to_owner(item, message, phone_number, email)
     @item = item
     @message = message
     @phone_number = phone_number
     @email = email
-    @photo = photo #<<<<<< here photo params
     mail(
       to:       item.user.email,
       subject:  "Your #{item.name} was found :D"
