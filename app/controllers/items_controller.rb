@@ -54,7 +54,7 @@ class ItemsController < ApplicationController
 
   def create
     @item = Item.new(item_params.merge(user: current_user))
-    if current_user
+    if current_user && @item.valid?
       generate_code(@item)
       if @item.valid?
         @item.save
