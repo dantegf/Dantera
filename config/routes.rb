@@ -11,23 +11,11 @@ Rails.application.routes.draw do
 
   root to: 'pages#home'
 
-  # get 'items/index'
-
   get 'items/code'
 
   get 'items/show'
 
   post 'items/report_lost'
-
-  # get 'items/new'
-
-  # post 'items/create'
-
-  # get 'items/update'
-
-  # get 'items/edit'
-
-  # get 'items/destroy'
 
   get 'users/index'
 
@@ -44,5 +32,24 @@ Rails.application.routes.draw do
   get 'users/destroy'
 
   get "/:search", to: "items#show"
+
+  # I (Dante) added this not sure if it's correct, but works /dantera.org/pages/about_us
+  get 'pages/about_us'
+
+  get 'pages/how_to'
+  # end
+
+  # get 'items/index'
+
+  # get 'items/new'
+
+  # post 'items/create'
+
+  # get 'items/update'
+
+  # get 'items/edit'
+
+  # get 'items/destroy'
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
