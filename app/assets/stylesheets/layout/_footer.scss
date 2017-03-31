@@ -1,3 +1,5 @@
+// Won't work properly, I don't want the normal text italic, I want it like this
+// I want it to act just like the mailto: option
 .a_footer:link {
   color: white !important;
   text-decoration: none !important;
@@ -7,20 +9,27 @@
 .a_footer:visited {
   color: white !important;
   text-decoration: none !important;
+  font-style: italic !important;
+}
+
+.a_footer:visited:hover {
+  color: white !important;
+  text-decoration: none !important;
   font-style: normal !important;
 }
 
 .a_footer:hover {
   color: #A7A7A7 !important;
   font-style: italic !important;
-  text-decoration:none !important;
+  text-decoration: italic !important;
 }
 
 .a_footer:active {
   color: white !important;
   text-decoration: none !important;
-  font-style: italic !important;
+  font-style: normal !important;
 }
+// not working properly I don't know what, it says it inherits italic, but don't know from where
 
 .min-height {
   min-height: calc(100vh - 173px) !important;
