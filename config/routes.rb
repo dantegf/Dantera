@@ -34,9 +34,9 @@ Rails.application.routes.draw do
   get "/:search", to: "items#show"
 
   # I (Dante) added this not sure if it's correct, but works /dantera.org/pages/about_us
-  get 'pages/about_us'
-
   get 'pages/how_to'
+
+  get 'pages/about_us'
   # end
 
   # get 'items/index'

@@ -1,23 +1,25 @@
-.a:link {
-  color: white;
-  text-decoration:none;
+.a_footer:link {
+  color: white !important;
+  text-decoration: none !important;
+  font-style: normal !important;
 }
 
-.a:visited {
-  color: #A7A7A7;
-  font-style: italic;
-  text-decoration:none;
+.a_footer:visited {
+  color: white !important;
+  text-decoration: none !important;
+  font-style: normal !important;
 }
 
-.a:hover {
-  color: #A7A7A7;
-  font-style: italic;
-  text-decoration:none;
+.a_footer:hover {
+  color: #A7A7A7 !important;
+  font-style: italic !important;
+  text-decoration:none !important;
 }
 
-.a:active {
-  color: white;
-  text-decoration:none;
+.a_footer:active {
+  color: white !important;
+  text-decoration: none !important;
+  font-style: italic !important;
 }
 
 .min-height {

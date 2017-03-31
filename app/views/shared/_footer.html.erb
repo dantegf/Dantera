@@ -2,11 +2,17 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-12 col-sm-4 col-sm-xs">
-    <div class="text-center dantera-white" id="footer-left">
+    <div class="text-center" id="footer-left">
       <ul style="list-style: none">
-        <li><a class="a" href="pages/how_to"> How to </a></li>
-        <li><a class="a" href="pages/about_us"> About us </a></li>
-        <li><a class="a" href="mailto:dante.fereghetti@gmail.com"> Contact us </a></li>
+        <li><%= link_to pages_how_to_path, class: "a_footer" do %>
+            <i><%= t(".dashboard", default: "How to") %></i>
+        <% end %>
+        </li>
+        <li><%= link_to pages_about_us_path, class: "a_footer" do %>
+            <i><%= t(".dashboard", default: "About us") %></i>
+        <% end %>
+        </li>
+        <li><a class="a_footer" href="mailto:dante.fereghetti@gmail.com"> Contact us </a></li>
       </ul>
     </div>
     </div>
