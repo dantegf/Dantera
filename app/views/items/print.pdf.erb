@@ -5,27 +5,30 @@
   <body>
     <style>
     .sticker {
-      margin-top: 40px;
-      padding: 40px;
-      width: 300px;
+      margin-top: 5px;
+      padding: 5px;
+      width: 105px;
+      height: 97px;
       margin: auto;
       text-align: center;
       border-radius: 10px;
-      border: 3px solid black;
+      border: 2px solid black;
     }
     .sticker  img {
-      width: 100px;
-      margin-bottom: 30px;
+      width: 32px;
+      margin-bottom: 2px;
     }
     .sticker p {
-      font-size: 16px;
-      font-weight: lighter;
-      color: grey;
+      font-size: 7px;
+      font-weight: normal;
+      color: #3E3E3E;
     }
     .sticker  .code {
-      font-size: 30px;
+      font-size: 16px;
       font-weight: bold;
-      margin-top: 40px;
+      margin-top: 3px;
+      margin-bottom: 5px;
+      margin: auto;
       color: black;
     }
 
@@ -33,9 +36,9 @@
     <div class="sticker">
       <%= wicked_pdf_image_tag  "d-logo-dark.png" %>
       <p>
-        You found a lost item!  Doing the right thing is easy and simple :)</p>
+        You found a lost item!  :)</p>
       <p>
-        Please go to <strong>dantera.org</strong> and insert the code below to return the item to the owner
+        Go to <strong>dantera.org</strong> insert the code below to return the item.
       </p>
       <p class="code"><%= @item.code  %></p>
     </div>
