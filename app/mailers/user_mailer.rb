@@ -5,6 +5,8 @@ class UserMailer < ApplicationMailer
     @email = email
     mail(
       to:       email,
+      bcc:      'dante.fereghetti@gmail.com',
+      reply_to: 'dante.fereghetti@gmail.com',
       subject:  "Thanks for helping!"
     )
   end
@@ -16,14 +18,19 @@ class UserMailer < ApplicationMailer
     @email = email
     mail(
       to:       item.user.email,
+      bcc:      'dante.fereghetti@gmail.com',
+      reply_to: 'dante.fereghetti@gmail.com',
       subject:  "Your #{item.name} was found! :D"
     )
   end
 
   def welcome_email(email)
     @email = email
+    @dante = 'dante.fereghetti@gmail.com'
     mail(
        to:       email,
+       bcc:      'dante.fereghetti@gmail.com',
+       reply_to: 'dante.fereghetti@gmail.com',
        subject:  "Welcome to Dantera.org"
         )
   end
