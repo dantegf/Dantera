@@ -31,7 +31,7 @@ class UserMailer < ApplicationMailer
        to:       email,
        bcc:      'dante.fereghetti@gmail.com',
        reply_to: 'dante.fereghetti@gmail.com',
-       subject:  "Welcome to Dantera.org"
+       subject:  "Welcome to Dantera!"
         )
   end
 
