@@ -5,11 +5,11 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
   has_many :items
 
-  #after_create :send_welcome_email
+  after_create :welcome_email
 
   private
-  # def send_welcome_email
-  #   UserMailer.email_to_owner(self).deliver_now
-  # end
+  def welcome_email
+    UserMailer.welcome_email(email).deliver_now
+  end
 
 end
