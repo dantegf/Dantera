@@ -16,7 +16,7 @@ class ItemsController < ApplicationController
     end
   end
 
-    def small_print
+  def small_print
     @item = Item.find(params[:id])
     respond_to do |format|
       format.pdf do
@@ -31,9 +31,9 @@ class ItemsController < ApplicationController
     message = params[:message]
     phone_number = params[:phone_number]
     email = params[:email]
-    UserMailer.email_to_finder(item, message, email).deliver_now
-    UserMailer.email_to_owner(item, message, phone_number, email).deliver_now
-    redirect_to root_path, notice: "Thank you! The item owner will contact you shortly."
+      UserMailer.email_to_finder(item, message, email).deliver_now
+      UserMailer.email_to_owner(item, message, phone_number, email).deliver_now
+      redirect_to root_path, notice: "Thank you! The item owner will contact you shortly."
   end
 
   def show
@@ -96,14 +96,14 @@ class ItemsController < ApplicationController
   def destroy
     @item = Item.find(params[:id])
     @item.destroy!
-    redirect_to '/items', :notice => "Your item has been deleted"
+    redirect_to '/items', notice: "Your item has been deleted"
   end
 
   def report_lost
     @item = Item.find(params[:id])
     @item.update_attributes(reward: params[:reward], lost_message: params[:lost_message])
 
-    redirect_to '/items', :notice => "Well done, " + @item.name + " has been marked as lost."
+    redirect_to '/items', notice: "Well done, " + @item.name + " has been marked as lost."
   end
 
   private
