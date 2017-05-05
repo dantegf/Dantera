@@ -14,6 +14,14 @@
 @import "pages/index";
 @import "vendor/index";
 
+// For text selection
+::selection { background: #309ce1; }
+::-moz-selection { background: #309ce1; }
+
 body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  overflow-x: hidden;
   background-color: #f9f9f9
 }
