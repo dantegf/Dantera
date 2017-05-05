@@ -32,7 +32,7 @@
 
       <div class="col-xs-12 col-md-6 how-to-section">
         <div class="icon-and-title">
-          <div class="how-to-icon"><img src="assets/stamp-small.png" alt="" /></div>
+          <div class="how-to-icon"><%= image_tag "stamp-small.png" %></div>
            <h2 class="how-to-title"><span class="title-span">1</span> REGISTER AN ITEM</h2>
         </div>
         <p class="text-center">Log in to Dantera and add an item. Write the name (e.g. Wallet) and a brief description of it, as well as your email.</p>
@@ -40,7 +40,7 @@
 
       <div class="col-xs-12 col-md-6 how-to-section">
         <div class="icon-and-title">
-          <div class="how-to-icon"><img src="assets/pdf-small.png" alt="" /></div>
+          <div class="how-to-icon"><%= image_tag "pdf-small.png" %></div>
           <h2 class="how-to-title"><span class="title-span">2</span> PRINT YOUR STICKER</h2>
         </div>
         <p class="text-center">Once an item is created, you'll be able to download a PDF sticker. Choose the right size and print it out.</p>
@@ -48,7 +48,7 @@
 
       <div class="col-xs-12 col-md-6 how-to-section">
         <div class="icon-and-title">
-          <div class="how-to-icon"><img src="assets/tag-small.png" alt="" /></div>
+          <div class="how-to-icon"><%= image_tag "tag-small.png" %></div>
           <h2 class="how-to-title"><span class="title-span">3</span> PUT IT ON THE ITEM</h2>
         </div>
         <p class="text-center">Put the sticker with the code on your item. Make sure it's visible!</p>
@@ -56,7 +56,7 @@
 
       <div class="col-xs-12 col-md-6 how-to-section">
         <div class="icon-and-title">
-          <div class="how-to-icon"><img src="assets/tick-small.png" alt="" /></div>
+          <div class="how-to-icon"><%= image_tag "tick-small.png" %></div>
           <h2 class="how-to-title"><span class="title-span">4</span> THAT'S IT!</h2>
         </div>
         <p class="text-center">Well done! You'll never have to worry about losing your item anymore.</p>
@@ -71,7 +71,8 @@
   <div class="box-1">
     <div class="row">
       <div class="col-img col-xs-12 col-md-5">
-        <img src="assets/plane-big.png" alt="" class="img-benefit hidden-sm hidden-xs"/>
+        <%= image_tag "plane-big.png", class: "img-benefit hidden-sm hidden-xs" %>
+        <!-- <img src="assets/plane-big.png" alt="" class="img-benefit hidden-sm hidden-xs"/> -->
       </div>
       <div class="benefit-text col-xs-12 col-md-7">
         <h2 class="title-white text-center">TRAVEL SAFELY</h2>
@@ -83,7 +84,8 @@
   <div class="box-2">
     <div class="row">
       <div class="col-img col-xs-12 col-md-5">
-        <img src="assets/world-big.png" alt="" class="img-benefit hidden-sm hidden-xs"/>
+        <%= image_tag "world-big.png", class: "img-benefit hidden-sm hidden-xs" %>
+        <!-- <img src="assets/world-big.png" alt="" class="img-benefit hidden-sm hidden-xs"/> -->
       </div>
       <div class="benefit-text col-xs-12 col-md-7">
         <h2 class="title-white text-center">MANAGE ANYTHING, ANYWHERE</h2>
@@ -95,7 +97,8 @@
   <div class="box-3">
     <div class="row">
       <div class="col-img col-xs-12 col-md-5">
-        <img src="assets/lock-big.png" alt="" class="img-benefit hidden-sm hidden-xs"/>
+        <%= image_tag "lock-big.png", class: "img-benefit hidden-sm hidden-xs" %>
+        <!-- <img src="assets/lock-big.png" alt="" class="img-benefit hidden-sm hidden-xs"/> -->
       </div>
       <div class="benefit-text col-xs-12 col-md-7">
         <h2 class="title-white text-center">MORE PRIVACY</h2>
@@ -116,14 +119,16 @@
   <h2 class="title-black text-center" style="margin-bottom: 20px;">FOUNDERS</h2>
   <div class="row">
     <div class="col-founder text-center col-xs-12 col-sm-6">
-      <img src="assets/dante.png" alt="" class="founders-photo"/>
+      <%= image_tag "dante.png", class: "founders-photo" %>
+      <!-- <img src="assets/dante.png" alt="" class="founders-photo"/> -->
       <div class="bio-container">
-        <h4 class="founders-name">Dante G. Fereghetti</h4>
-        <p class="founders-bio">Co-founder, leader and successful entrepreneur since 16 years old, traveling is my hobby</p>
+        <a href="https://www.linkedin.com/in/dantegf/" target="_blank"><h4 class="founders-name">Dante G. Fereghetti</h4></a>
+        <p class="founders-bio">Co-founder, product manager, successful entrepreneur and passion for technology</p>
       </div>
     </div>
     <div class="col-founder text-center col-xs-12 col-sm-6">
-      <img src="assets/giac.png" alt="" class="founders-photo"/>
+      <%= image_tag "giac.png", class: "founders-photo" %>
+      <!-- <img src="assets/giac.png" alt="" class="founders-photo"/> -->
       <div class="bio-container">
         <h4 class="founders-name">Giacomo Moscatelli</h4>
         <p class="founders-bio">Co-founder, front end developer, passionate about anything artsy and creative</p>
@@ -136,9 +141,9 @@
 <div class="contact-container">
   <h2 class="title-white text-center">GOT A QUESTION?</h2>
   <p class="p-white text-center">
-  <a href="mailto:dante.fereghetti@gmail.com?Subject=Subject">
+  <a href="mailto:dante.fereghetti@gmail.com?Subject=Dantera.org">
     <i class="fa fa-envelope fa-lg" aria-hidden="true"></i>
-      &nbsp; Contact Dante
+      &nbsp; Contact US
   </a>
   </p>
 </div>
