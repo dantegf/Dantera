@@ -21,6 +21,7 @@ gem 'autoprefixer-rails'
 gem 'postmark-rails'
 gem 'wicked_pdf'
 gem 'wkhtmltopdf-binary'
+gem 'sticky-rails'
 
 group :development, :test do
   gem 'binding_of_caller'

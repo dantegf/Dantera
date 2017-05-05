@@ -198,6 +198,7 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
+    sticky-rails (1.0.3)
     thor (0.19.4)
     thread_safe (0.3.5)
     tilt (2.0.5)
@@ -244,6 +245,7 @@ DEPENDENCIES
   simple_form
   spring
   spring-watcher-listen (~> 2.0.0)
+  sticky-rails
   uglifier
   wicked_pdf
   wkhtmltopdf-binary
@@ -252,4 +254,4 @@ RUBY VERSION
    ruby 2.3.1p112
 
 BUNDLED WITH
-   1.13.6
+   1.14.1
