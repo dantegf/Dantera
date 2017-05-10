@@ -1,16 +1,18 @@
-/* -------------------------------------
+/* --------------------------------
  * CSS code specific to home page
  * (margin/padding adjustments)
- * ------------------------------------- */
+ * -------------------------------- */
 
 .banner {
+  height: calc(100vh - 70px);
+  /* For mobile version */
+  min-height: 300px;
   margin: 0;
   text-align: center;
   background-image: linear-gradient(rgba(0,0,0,.3), transparent, transparent, transparent, rgba(0,0,0,.3)), image-url("home-bg-blue.jpg");
   background-repeat:no-repeat;
   background-position: center center;
   background-size: cover;
-  height: calc(100vh - 70px);
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -18,12 +20,22 @@
 }
 
 .home-title {
-    color: white;
-    font-size: 75px;
-    font-family: 'Abel', sans-serif;
-    font-weight: bold;
-    text-shadow: 0 0 10px rgba(0,0,0,0.5);
-    transform: translateY(-10px);
+  color: white;
+  font-size: 75px;
+  font-family: 'Abel', sans-serif;
+  font-weight: bold;
+  text-shadow: 0 0 10px rgba(0,0,0,0.5);
+  transform: translateY(-10px);
+}
+
+.xs-home-title {
+  color: white;
+  font-size: 50px;
+  font-family: 'Abel', sans-serif;
+  font-weight: bold;
+  text-shadow: 0 0 10px rgba(0,0,0,0.5);
+  margin-bottom: 20px;
+  max-width: 90vw;
 }
 
 .home-p {
@@ -335,7 +347,8 @@ font-size: 23px;
 }
 
 .founders-bio {
-  /* * */
+  /* For mobile version */
+  margin-bottom: 25px;
 }
 
 .contact-container {
