@@ -3,6 +3,11 @@
  * (margin/padding adjustments)
  * -------------------------------- */
 
+/* For Benefits section in IE */
+.width-400 {
+  max-width: 400px;
+}
+
 .banner {
   height: calc(100vh - 70px);
   /* For mobile version */
@@ -16,7 +21,6 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-
 }
 
 .home-title {
