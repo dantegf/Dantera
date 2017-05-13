@@ -31,6 +31,13 @@
   justify-content: space-between;
 }
 
+.navbar-wagon-right-mobile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 /* Navbar item */
 .navbar-wagon-item {
   flex: 0 1 auto;
@@ -53,22 +60,32 @@
   margin-left: 0;
   background-color: #309ce1;
   padding: 0 20px;
-  border: none;
+  border: none !important;
   border-radius: 2px;
   line-height: 40px;
   color: white;
   font-size: 14px;
+  outline: none !important;
+}
+
+.navbar-wagon-button:hover {
+  color: white;
+  outline: none !important;
+}
+
+.navbar-wagon-button:active, .navbar-wagon-item:active {
+  border: none !important;
+  outline: none !important;
 }
 
 .navbar-wagon-button a {
+  outline: none !important;
   background-color: #309ce1;
   transition: 0.4s;
 }
 
-.navbar-wagon-button:hover {
-  color: #154666;
-  text-decoration: none;
-  transition: 0.4s;
+.navbar-wagon-button a:active {
+  outline: none !important;
 }
 
 .navbar-wagon-button-bordered {
@@ -84,8 +101,34 @@
 }
 
 .navbar-wagon-button-bordered:hover {
-  color: #154666;
+  color: #309ce1;
+  background: white !important;
   transition: 0.4s;
+}
+
+.navbar-white-link {
+  margin: 5px auto 5px !important;
+  opacity: .9;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 18px;
+  outline: none !important;
+  transition: all .2s;
+}
+
+.navbar-white-link:hover {
+  margin: 5px auto 5px !important;
+  opacity: 1;
+  background: none;
+  border: none;
+  color: white;
+  outline: none !important;
+  transition: all .2s;
+}
+
+.navbar-white-link:active {
+  outline: none !important;
 }
 
 /* Navbar search form */
@@ -157,10 +200,46 @@
 }
 
 .privacy-link {
-  // position: absolute
+  // o0O0Oo0O0Oo0O0Oo
 }
 
 .logout-link a {
-  // position: absolute;
   margin-top: -10px
+}
+
+/* MOBILE */
+.burger-icon {
+  float: right;
+  margin-bottom: 25px;
+  margin-top: 15px;
+  background: white;
+  opacity: .9;
+  height: 4px;
+  width: 40px;
+  border-radius: 2px;
+  box-shadow: 0 10px 0 white, 0 20px 0 white;
+  transition: all .2s;
+}
+
+.burger-icon:before {
+  position: absolute;
+  content: '';
+  width: 40px;
+  height: 24px;
+  background: none;
+}
+
+.burger-icon:hover {
+  opacity: 1;
+  transition: all .2s;
+}
+
+.burger-menu {
+  display: none;
+  margin: 0;
+  width: 100%;
+  background: #309ce1;
+  border-bottom: 1px solid #c7d9e5;
+  border-radius: 0 !important;
+  padding: 10px;
 }

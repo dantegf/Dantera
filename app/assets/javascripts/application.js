@@ -9,4 +9,9 @@ $(document).ready(function(){
      the top of the page */
   $('html, body').scrollTop(0);
 
+  /* Burger menu */
+  $(".burger-icon").click(function(){
+    $(".burger-menu").slideToggle(250);
+  });
+
 });
