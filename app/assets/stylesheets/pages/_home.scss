@@ -90,6 +90,8 @@
   background: #309ce1;
   border: none;
   border-radius: 3px;
+  /* Would not look centered otherwise */
+  transform: translateX(-2px) !important;
   transition: 0.4s
 }
 
