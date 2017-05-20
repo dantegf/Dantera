@@ -16,7 +16,7 @@
               <% else %>
                 <%= f.input :email, autofocus: true %>
               <% end %>
-              <%= f.input :password, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length), placeholder: "At least 6 characters" %>
+              <%= f.input :password, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
               <%= f.input :password_confirmation %>
             </div>
 

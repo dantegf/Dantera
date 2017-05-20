@@ -15,8 +15,8 @@
 @import "vendor/index";
 
 // For text selection
-::selection { background: #309ce1; }
-::-moz-selection { background: #309ce1; }
+::selection { background: #333; color: white; }
+::-moz-selection { background: #333; color: white; }
 
 html {
   position: relative;

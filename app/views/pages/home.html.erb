@@ -11,7 +11,14 @@
     <!-- Search Form -->
       <%= form_tag(items_show_path, :method => "get", id: "search-form") do %>
         <%= text_field_tag :search, params[:search], placeholder: "Got a code?", class: "search-bar" %>
-        <%= submit_tag "Search", :name => nil, class: "search-btn" %>
+
+        <!-- Bar and button on two different rows on mobile -->
+        <br class="hidden-sm hidden-md hidden-lg">
+
+        <%= submit_tag "Search", :name => nil, class: "search-btn hidden-xs" %>
+
+        <!-- Wider button for mobile -->
+        <%= submit_tag "Search", :name => nil, class: "search-btn-mobile hidden-sm hidden-md hidden-lg" %>
       <% end %>
     </div>
 
@@ -125,7 +132,8 @@
       <%= image_tag "dante.png", class: "founders-photo" %>
       <!-- <img src="assets/dante.png" alt="" class="founders-photo"/> -->
       <div class="bio-container">
-        <a href="https://www.linkedin.com/in/dantegf/" target="_blank"><h4 class="founders-name">Dante G. Fereghetti</h4></a>
+        <h4 class="founders-name">Dante G. Fereghetti &nbsp;<a href="https://www.linkedin.com/in/dantegf/" target="_blank"><i class="fa fa-linkedin-square fa-md" aria-hidden="true"></i></a></h4>
+
         <p class="founders-bio">Co-founder, product manager, successful entrepreneur and passionate for improving people’s life through technology</p>
       </div>
     </div>
@@ -134,7 +142,8 @@
       <!-- <img src="assets/giac.png" alt="" class="founders-photo"/> -->
       <div class="bio-container">
         <h4 class="founders-name">Giacomo Moscatelli</h4>
-        <p class="founders-bio">Co-founder, front end developer, passionate about anything artsy and creative</p>
+
+        <p class="founders-bio">Co-founder, front end developer, passionate about web design and anything creative</p>
       </div>
     </div>
   </div>

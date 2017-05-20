@@ -76,8 +76,29 @@
   transition: 0.4s
 }
 
+.search-btn-mobile {
+  height: 43px;
+  width: 214px;
+  margin-top: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background: #309ce1;
+  border: none;
+  border-radius: 3px;
+  transition: 0.4s
+}
+
+.search-btn-mobile:hover {
+  background-color: #247eb7;
+  box-shadow: none;
+  border: none;
+  transition: 0.4s
+}
+
 .search-btn:active {
-  //
+  //  :)
 }
 
 .block {
@@ -90,7 +111,7 @@ font-size: 23px;
 }
 
 .try-link {
-  margin-top: 75px;
+  margin-top: 70px;
   font-size: 30px;
   font-weight: bold;
   font-family: 'Abel', sans-serif;
@@ -341,16 +362,31 @@ font-size: 23px;
   margin-bottom: 10px;
 }
 
+.fa-linkedin-square {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  color: #111;
+  transition: all .2s;
+}
+
+.fa-linkedin-square:hover {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  color: #444;
+  transition: all .2s;
+}
+
 .bio-container {
   width: 250px;
   max-width: 75vw;
 }
 
 .founders-name {
-  /* * */
+  color: #111;
 }
 
 .founders-bio {
+  color: #111;
   /* For mobile version */
   margin-bottom: 25px;
 }
