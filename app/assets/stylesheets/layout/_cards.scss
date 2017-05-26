@@ -3,6 +3,13 @@
   padding-bottom: 50px;
 }
 
+.counter {
+  /* Prevents it from
+  shrinking  on mobile */
+  min-height: 40px;
+  min-width: 40px;
+}
+
 .main-card {
   width: 100%;
   padding-right: 0;
