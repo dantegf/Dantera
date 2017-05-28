@@ -72,10 +72,28 @@
 }
 
 .search-btn:hover {
+  text-decoration: none !important;
   background-color: #247eb7;
   box-shadow: none;
   border: none;
+  color: white;
   transition: 0.4s
+}
+
+.search-btn:visited {
+  text-decoration: none !important;
+  background-color: #247eb7;
+  box-shadow: none;
+  border: none;
+  color: white;
+}
+
+.search-btn:active {
+  text-decoration: none !important;
+  background-color: #247eb7;
+  box-shadow: none;
+  border: none;
+  color: white;
 }
 
 .search-btn-mobile {
