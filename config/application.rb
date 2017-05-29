@@ -14,7 +14,7 @@ require "sprockets/railtie"
 
 # # Added 05/29/2017
 # config.action_mailer.delivery_method = :postmark
-# config.action_mailer.postmark_settings = { :api_token => "3c9890fe-ce61-4098-812b-38be1e412be0" }
+# config.action_mailer.postmark_settings = { :api_token => "" }
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
