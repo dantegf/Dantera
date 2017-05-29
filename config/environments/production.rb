@@ -3,13 +3,7 @@ Rails.application.configure do
   # Added 05/29/2107
   config.action_mailer.delivery_method = :postmark
   config.action_mailer.postmark_settings = { api_token: ENV['POSTMARK_TOKEN'] }
-  # config.action_mailer.delivery_method = :postmark
-  # config.action_mailer.postmark_settings = { :api_token => "adf87c09-ae36-455b-a003-a71f7c601976" }
-
-
   # Taken out 05/29/2017
-  # config.action_mailer.delivery_method = :postmark
-  # config.action_mailer.postmark_settings = { api_token: ENV['POSTMARK_TOKEN'] }
   # config.action_mailer.asset_host = 'http://dantera.herokuapp.com'
 
   # Settings specified here will take precedence over those in config/application.rb.
