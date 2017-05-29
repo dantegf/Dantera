@@ -7,7 +7,7 @@ class UserMailer < ApplicationMailer
     mail(
       to:       email,
       bcc:      'dante.fereghetti@gmail.com',
-      reply_to: 'dante.fereghetti@gmail.com',
+      reply_to: 'dante@dantera.org',
       subject:  "Thanks for helping!",
       track_opens: 'true'
     )
@@ -21,7 +21,7 @@ class UserMailer < ApplicationMailer
     mail(
       to:       item.user.email,
       bcc:      'dante.fereghetti@gmail.com',
-      reply_to: 'dante.fereghetti@gmail.com',
+      reply_to: 'dante@dantera.org',
       subject:  "Your #{item.name} was found! :D",
       track_opens: 'true'
     )
@@ -33,7 +33,7 @@ class UserMailer < ApplicationMailer
     mail(
        to:       email,
        bcc:      'dante.fereghetti@gmail.com',
-       reply_to: 'dante.fereghetti@gmail.com',
+       reply_to: 'dante@dantera.org',
        subject:  "Welcome to Dantera!",
        track_opens: 'true'
      )

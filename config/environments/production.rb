@@ -1,8 +1,11 @@
 Rails.application.configure do
 
   # Added 05/29/2107
+  # config.action_mailer.delivery_method = :postmark
+  # config.action_mailer.postmark_settings = { api_token: ENV['POSTMARK_TOKEN'] }
   config.action_mailer.delivery_method = :postmark
-  config.action_mailer.postmark_settings = { api_token: ENV['POSTMARK_TOKEN'] }
+  config.action_mailer.postmark_settings = { :api_token => "adf87c09-ae36-455b-a003-a71f7c601976" }
+
 
   # Taken out 05/29/2017
   # config.action_mailer.delivery_method = :postmark
@@ -94,5 +97,3 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 end
-
-#pmapp3c9890fe-ce61-4098-812b-38be1e412be0
