@@ -1,4 +1,5 @@
 class UserMailer < ApplicationMailer
+
   def email_to_finder(item, message, email)
     @item = item
     @message = message
@@ -7,7 +8,8 @@ class UserMailer < ApplicationMailer
       to:       email,
       bcc:      'dante.fereghetti@gmail.com',
       reply_to: 'dante.fereghetti@gmail.com',
-      subject:  "Thanks for helping!"
+      subject:  "Thanks for helping!",
+      track_opens: 'true'
     )
   end
 
@@ -20,7 +22,8 @@ class UserMailer < ApplicationMailer
       to:       item.user.email,
       bcc:      'dante.fereghetti@gmail.com',
       reply_to: 'dante.fereghetti@gmail.com',
-      subject:  "Your #{item.name} was found! :D"
+      subject:  "Your #{item.name} was found! :D",
+      track_opens: 'true'
     )
   end
 
@@ -31,8 +34,9 @@ class UserMailer < ApplicationMailer
        to:       email,
        bcc:      'dante.fereghetti@gmail.com',
        reply_to: 'dante.fereghetti@gmail.com',
-       subject:  "Welcome to Dantera!"
-        )
+       subject:  "Welcome to Dantera!",
+       track_opens: 'true'
+     )
   end
 
 end
