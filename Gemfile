@@ -23,8 +23,6 @@ gem 'wicked_pdf'
 gem 'wkhtmltopdf-binary'
 gem 'sticky-rails'
 gem 'middleman-robots'
-
-group :development, :test do
   gem 'binding_of_caller'
   gem 'better_errors'
   gem 'pry-byebug'
