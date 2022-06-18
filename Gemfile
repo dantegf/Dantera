@@ -29,5 +29,5 @@ gem 'middleman-robots'
   gem 'pry-rails'
   gem 'spring'
   gem 'listen'
- //gem 'spring-watcher-listen'
+ #gem 'spring-watcher-listen'
 end
