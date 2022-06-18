@@ -8,7 +8,7 @@ gem 'figaro'
 gem 'jbuilder'
 gem 'devise'
 gem 'redis'
-gem 'cloudinary', 
+gem 'cloudinary' 
 gem 'carrierwave'
 gem "letter_opener"
 gem 'sass-rails'
