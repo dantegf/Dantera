@@ -30,4 +30,3 @@ gem 'pry-rails'
 gem 'spring'
 gem 'listen'
 
-end
