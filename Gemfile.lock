@@ -315,7 +315,7 @@ DEPENDENCIES
   wkhtmltopdf-binary
 
 RUBY VERSION
-   ruby 2.3.1p112
+   ruby 2.7.4
 
 BUNDLED WITH
    1.14.1
