@@ -29,8 +29,7 @@ DEPENDENCIES
   redis
   sass-rails
   simple_form
-  spring
-  spring-watcher-listen 
+  spring 
   sticky-rails
   uglifier
   wicked_pdf
