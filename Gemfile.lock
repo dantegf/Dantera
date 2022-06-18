@@ -11,26 +11,26 @@ DEPENDENCIES
   binding_of_caller
   bootstrap-sass
   carrierwave
-  cloudinary (= 1.1.0)
+  cloudinary
   devise
   figaro
   font-awesome-sass
-  jbuilder (~> 2.0)
+  jbuilder 
   jquery-rails
   letter_opener
-  listen (~> 3.0.5)
+  listen
   middleman-robots
   pg
   postmark-rails
   pry-byebug
   pry-rails
   puma
-  rails (= 5.0.0.1)
+  rails
   redis
   sass-rails
   simple_form
   spring
-  spring-watcher-listen (~> 2.0.0)
+  spring-watcher-listen 
   sticky-rails
   uglifier
   wicked_pdf
@@ -40,4 +40,4 @@ RUBY VERSION
    ruby 2.7.4
 
 BUNDLED WITH
-   1.14.1
+   1.17.3
