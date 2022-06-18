@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 ruby '3.1.2'
-Bundler '2.3.16'
+
 
 gem 'rails'
 gem 'puma'
