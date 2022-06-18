@@ -1,14 +1,14 @@
 source 'https://rubygems.org'
 ruby '2.7.4'
 
-gem 'rails', '5.0.0.1'
+gem 'rails'
 gem 'puma'
 gem 'pg'
 gem 'figaro'
-gem 'jbuilder', '~> 2.0'
+gem 'jbuilder'
 gem 'devise'
 gem 'redis'
-gem 'cloudinary', '1.1.0'
+gem 'cloudinary', 
 gem 'carrierwave'
 gem "letter_opener"
 gem 'sass-rails'
@@ -30,6 +30,6 @@ group :development, :test do
   gem 'pry-byebug'
   gem 'pry-rails'
   gem 'spring'
-  gem 'listen', '~> 3.0.5'
-  gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'listen'
+  gem 'spring-watcher-listen'
 end
