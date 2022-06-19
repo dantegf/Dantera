@@ -31,3 +31,12 @@ gem 'pry-rails'
 gem 'spring'
 gem 'listen'
 
+group :development, :test do
+  gem 'pry-byebug'
+  gem 'pry-rails'
+  gem 'spring'
+  gem 'listen'
+  gem 'spring-watcher-listen'
+  gem 'listen'
+  gem 'spring-watcher-listen'
+end
